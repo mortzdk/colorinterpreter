@@ -25,7 +25,7 @@
  * console.log(gold.toPercentageRGB());  // rgb(100%,84.31%,0%)
  * console.log(gold.toPercentageRGBA()); // rgba(100%,84.31%,0%,1) 
  * console.log(gold.toRGB());            // rgb(255,215,0)
- * console.log(gold.toRGBA());           // rgb(255,215,0,1)
+ * console.log(gold.toRGBA());           // rgba(255,215,0,1)
  * console.log(gold.toHSL());            // hsl(50.59,100%,50%)
  * console.log(gold.toHSLA());           // hsla(50.59,100%,50%,1) 
  * console.log(gold.toKeyword());        // gold 
