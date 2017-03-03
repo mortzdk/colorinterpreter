@@ -35,7 +35,8 @@ if [ -d ".git" ]; then
     if [ -z "${changes}" ]; then
         bump_bower "bower.json"
         bump_js "index.js"
-        git push origin --tags
+		git add .
+		git commit -m "Bump to ${version}"
         npm publish ./
     else
         echo "Please commit staged files prior to bumping"
