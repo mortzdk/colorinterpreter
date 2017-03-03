@@ -2,7 +2,11 @@
 	"name": "colorinterpreter",
 	"version": "1.0.0",
 	"homepage": "https://github.com/mortzdk/colorinterpreter",
-	"main": ["dist/color.js", "dist/color.min.js"],
+	"main": [
+		"dist/colorinterpreter.js", 
+		"dist/colorinterpreter.min.js", 
+		"dist/colorinterpreter.min.js.map"
+	],
 	"keywords": [
 		"color",
 		"rgb",
