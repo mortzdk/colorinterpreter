@@ -1,5 +1,5 @@
 {
-	"name": "ColorInterpreter",
+	"name": "colorinterpreter",
 	"version": "0.0.1",
 	"homepage": "https://github.com/mortzdk/colorinterpreter",
 	"main": ["dist/color.js", "dist/color.min.js"],
