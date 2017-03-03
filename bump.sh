@@ -26,13 +26,13 @@ if [ -z "$1" ] || [ "$1" = "help" ]; then
 fi
 
 release=$1
-output=$(npm version ${release} --no-git-tag-version)
-version=${output:1}
 
 if [ -d ".git" ]; then
     changes=$(git status --porcelain)
 
     if [ -z "${changes}" ]; then
+		output=$(npm version ${release} --no-git-tag-version)
+		version=${output:1}
         bump_bower "bower.json"
         bump_js "index.js"
 		git add .
@@ -42,6 +42,8 @@ if [ -d ".git" ]; then
         echo "Please commit staged files prior to bumping"
     fi
 else
+	output=$(npm version ${release} --no-git-tag-version)
+	version=${output:1}
     bump_bower "bower.json"
     bump_js "index.js"
 fi

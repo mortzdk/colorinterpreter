@@ -14,7 +14,7 @@
  * The ColorError class is used whenever the parsing of a color goes wrong.
  *
  * @module ColorInterpreter
- * @version 0.0.1
+ * @version 1.0.0
  *
  * @example
  * // A typical usage of the Color object. Here the "gold" string could be

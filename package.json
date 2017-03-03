@@ -1,6 +1,6 @@
 {
-  "name": "ColorInterpreter",
-  "version": "0.0.1",
+  "name": "colorinterpreter",
+  "version": "1.0.0",
   "description": "ColorInterpreter is a module able to convert any acceptable browser color-scheme to any other acceptable browser color-scheme.",
   "homepage": "https://github.com/mortzdk/colorinterpreter",
   "repository": {
@@ -8,8 +8,8 @@
     "url": "git://github.com/mortz.dk/colorinterpreter.git"
   },
   "bugs": {
-      "url" : "https://github.com/mortzdk/colorinterpreter/issues",
-      "email" : "morten@mortz.dk"
+    "url": "https://github.com/mortzdk/colorinterpreter/issues",
+    "email": "morten@mortz.dk"
   },
   "keywords": [
     "color",
@@ -22,16 +22,15 @@
     "interpreter"
   ],
   "author": {
-      "name" : "Morten Houmøller Nygaard",
-      "email" : "morten@mortz.dk",
-      "name" : "https://mortz.dk"
+    "name": "https://mortz.dk",
+    "email": "morten@mortz.dk"
   },
   "directories": {
-      "doc" : "docs"
+    "doc": "docs"
   },
   "license": "SEE LICENSE IN MIT-LICENSE",
   "main": "index.js",
-  "dependencies" : {
+  "dependencies": {
     "jsdoc": "^3.4.3",
     "jsdoc-to-markdown": "^3.0.0",
     "uglify-js": "^2.8.5",
@@ -52,13 +51,13 @@
     "coverage": "npm run cov",
     "markdown": "jsdoc2md -l js --configure .jsdoc.json index.js > docs/README.md",
     "doc": "jsdoc --pedantic --configure .jsdoc.json --verbose index.js",
-    "coverage": "npm run cov",
     "documentation": "npm run doc",
     "dist": "npm run build",
     "build": "npm run test && npm run cov && npm run doc && npm run markdown && mkdir -p dist && browserify index.js -s ColorInterpreter -o dist/colorinterpreter.js && uglifyjs -c -m -o dist/colorinterpreter.min.js --source-map dist/colorinterpreter.min.js.map -v -- dist/colorinterpreter.js",
     "clean": "rm -rf coverage && rm -rf dist"
   },
-  "eslintConfig": { "extends": [
+  "eslintConfig": {
+    "extends": [
       "eslint:recommended"
     ],
     "rules": {
