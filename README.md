@@ -1,13 +1,13 @@
 # ColorInterpreter
-[![view on npm](http://img.shields.io/npm/v/colorinterpreter.svg)](https://www.npmjs.org/package/colorinterpreter)
-[![npm module downloads](http://img.shields.io/npm/dt/colorinterpreter.svg)](https://www.npmjs.org/package/colorinterpreter)
+[![View on NPM](http://img.shields.io/npm/v/colorinterpreter.svg)](https://www.npmjs.org/package/colorinterpreter)
+[![NPM Module Downloads](http://img.shields.io/npm/dt/colorinterpreter.svg)](https://www.npmjs.org/package/colorinterpreter)
 [![Build Status](https://travis-ci.org/mortzdk/colorinterpreter.svg?branch=master)](https://travis-ci.org/mortzdk/colorinterpreter)
 [![Coverage Status](https://coveralls.io/repos/github/mortzdk/colorinterpreter/badge.svg?branch=master)](https://coveralls.io/github/mortzdk/colorinterpreter?branch=master)
 [![Dependency Status](https://david-dm.org/mortzdk/colorinterpreter.svg)](https://david-dm.org/mortzdk/colorinterpreter)
 
 A javascript module to interpret and output browser color strings.
 
-In `version 1.0.0` of the ColorInterpreter the following browser color strings are supported with inspiration from the [Mozilla Documentation](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value):
+ColorInterpreter support the following browser color strings with inspiration from the [Mozilla Documentation](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value):
 * HEX
 * HEXA (Hex with alpha value)
 * RGB
