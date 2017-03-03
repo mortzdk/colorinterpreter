@@ -1,0 +1,6 @@
+.tern-project
+*.swp
+*.swo
+npm-debug.log
+
+node_modules
