@@ -11,7 +11,7 @@ string as any browser color type, currently: HEX, HEXA, RGB, RGBA, HSL, HSLA,
 and color keywords.</p>
 <p>The ColorError class is used whenever the parsing of a color goes wrong.</p>
 
-**Version**: 1.0.0  
+**Version**: 1.0.1  
 **Example**  
 ```js
 // A typical usage of the Color object. Here the "gold" string could be

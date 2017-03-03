@@ -1,5 +1,44 @@
-(function(f){if(typeof exports==="object"&&typeof module!=="undefined"){module.exports=f()}else if(typeof define==="function"&&define.amd){define([],f)}else{var g;if(typeof window!=="undefined"){g=window}else if(typeof global!=="undefined"){g=global}else if(typeof self!=="undefined"){g=self}else{g=this}g.ColorInterpreter = f()}})(function(){var define,module,exports;return (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
-"use strict";
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>index.js - Documentation</title>
+
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="module-ColorInterpreter.Color.html">Color</a><ul class='methods'><li data-type='method'><a href="module-ColorInterpreter.Color.html#.addKeyword">addKeyword</a></li><li data-type='method'><a href="module-ColorInterpreter.Color.html#.hasBrowserSupport">hasBrowserSupport</a></li><li data-type='method'><a href="module-ColorInterpreter.Color.html#alpha">alpha</a></li><li data-type='method'><a href="module-ColorInterpreter.Color.html#blue">blue</a></li><li data-type='method'><a href="module-ColorInterpreter.Color.html#brightness">brightness</a></li><li data-type='method'><a href="module-ColorInterpreter.Color.html#clone">clone</a></li><li data-type='method'><a href="module-ColorInterpreter.Color.html#difference">difference</a></li><li data-type='method'><a href="module-ColorInterpreter.Color.html#equals">equals</a></li><li data-type='method'><a href="module-ColorInterpreter.Color.html#green">green</a></li><li data-type='method'><a href="module-ColorInterpreter.Color.html#isValid">isValid</a></li><li data-type='method'><a href="module-ColorInterpreter.Color.html#luminance">luminance</a></li><li data-type='method'><a href="module-ColorInterpreter.Color.html#red">red</a></li><li data-type='method'><a href="module-ColorInterpreter.Color.html#setFixed">setFixed</a></li><li data-type='method'><a href="module-ColorInterpreter.Color.html#toHEX">toHEX</a></li><li data-type='method'><a href="module-ColorInterpreter.Color.html#toHEXA">toHEXA</a></li><li data-type='method'><a href="module-ColorInterpreter.Color.html#toHSL">toHSL</a></li><li data-type='method'><a href="module-ColorInterpreter.Color.html#toHSLA">toHSLA</a></li><li data-type='method'><a href="module-ColorInterpreter.Color.html#toKeyword">toKeyword</a></li><li data-type='method'><a href="module-ColorInterpreter.Color.html#toPercentageRGB">toPercentageRGB</a></li><li data-type='method'><a href="module-ColorInterpreter.Color.html#toPercentageRGBA">toPercentageRGBA</a></li><li data-type='method'><a href="module-ColorInterpreter.Color.html#toRGB">toRGB</a></li><li data-type='method'><a href="module-ColorInterpreter.Color.html#toRGBA">toRGBA</a></li><li data-type='method'><a href="module-ColorInterpreter.Color.html#toString">toString</a></li></ul></li><li><a href="module-ColorInterpreter-ColorError.html">ColorError</a></li></ul><h3>Modules</h3><ul><li><a href="module-ColorInterpreter.html">ColorInterpreter</a><ul class='methods'><li data-type='method'><a href="module-ColorInterpreter.html#~isElement">isElement</a></li><li data-type='method'><a href="module-ColorInterpreter.html#~isFunction">isFunction</a></li><li data-type='method'><a href="module-ColorInterpreter.html#~isNumber">isNumber</a></li><li data-type='method'><a href="module-ColorInterpreter.html#~isObject">isObject</a></li><li data-type='method'><a href="module-ColorInterpreter.html#~isString">isString</a></li><li data-type='method'><a href="module-ColorInterpreter.html#~rgb2hsl">rgb2hsl</a></li><li data-type='method'><a href="module-ColorInterpreter.html#~to360Degrees">to360Degrees</a></li><li data-type='method'><a href="module-ColorInterpreter.html#~toFixed">toFixed</a></li><li data-type='method'><a href="module-ColorInterpreter.html#~zeroPad2">zeroPad2</a></li></ul></li></ul>
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">index.js</h1>
+    
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>"use strict";
 
 /**
  * A module to parse browser color strings as defined by: 
@@ -218,7 +257,7 @@ var support,
             var color,
                 view = (_context.ownerDocument || document).defaultView;
 
-            if ( view && "getComputedStyle" in view ) { // W3C standard way
+            if ( view &amp;&amp; "getComputedStyle" in view ) { // W3C standard way
                 color = view.getComputedStyle(_context, null)
                             .getPropertyValue("color");
             } else if ( "currentStyle" in _context ) { // IE
@@ -375,7 +414,7 @@ var support,
                     s       = parseFloat(_bits[3])/100, // Normalize to [0;1]
                     l       = parseFloat(_bits[4])/100, // Normalize to [0;1]
                     hue2rgb = function (_p, _q, _t) {
-                        if ( _t < 0 ) {
+                        if ( _t &lt; 0 ) {
                             _t += 1;
                         }
 
@@ -383,15 +422,15 @@ var support,
                             _t -= 1;
                         }
 
-                        if ( _t < 1/6 ) {
+                        if ( _t &lt; 1/6 ) {
                             return _p + (_q - _p) * 6 * _t;
                         }
 
-                        if ( _t < 1/2 ) {
+                        if ( _t &lt; 1/2 ) {
                             return _q;
                         }
 
-                        if ( _t < 2/3 ) {
+                        if ( _t &lt; 2/3 ) {
                             return _p + (_q - _p) * (2/3 - _t) * 6;
                         }
 
@@ -425,7 +464,7 @@ var support,
                 if ( s === 0 ) {
                     r = g = b = l; // achromatic
                 } else {
-                    q = l < 1/2 ? l * (1 + s) : l + s - l * s;
+                    q = l &lt; 1/2 ? l * (1 + s) : l + s - l * s;
                     p = 2 * l - q;
                     r = hue2rgb(p, q, h + 1/3);
                     g = hue2rgb(p, q, h);
@@ -621,22 +660,22 @@ function Color (_color, _context) {
              */
             self.a = values[3];
 
-            if ( !isNumber(self.r) || self.r < 0 || self.r > 255 ) {
+            if ( !isNumber(self.r) || self.r &lt; 0 || self.r > 255 ) {
                 self.valid = false;
                 throw new ColorError("Unable to parse the red value");
             }
 
-            if ( !isNumber(self.g) || self.g < 0 || self.g > 255 ) {
+            if ( !isNumber(self.g) || self.g &lt; 0 || self.g > 255 ) {
                 self.valid = false;
                 throw new ColorError("Unable to parse the green value");
             }
 
-            if ( !isNumber(self.b) || self.b < 0 || self.b > 255 ) {
+            if ( !isNumber(self.b) || self.b &lt; 0 || self.b > 255 ) {
                 self.valid = false;
                 throw new ColorError("Unable to parse the blue value");
             }
 
-            if ( !isNumber(self.a) || self.a < 0 || self.a > 1 ) {
+            if ( !isNumber(self.a) || self.a &lt; 0 || self.a > 1 ) {
                 self.valid = false;
                 throw new ColorError("Unable to parse the alpha value");
             }
@@ -958,19 +997,19 @@ Color.prototype = {
             g    = self.g/255,
             b    = self.b/255;
 
-        if ( r <= 0.03928 ) {
+        if ( r &lt;= 0.03928 ) {
             r = r / 12.92;
         } else {
             r = pow(((r + 0.055) / 1.055), 2.4);
         }
 
-        if ( g <= 0.03928 ) {
+        if ( g &lt;= 0.03928 ) {
             g = g / 12.92;
         } else {
             g = pow(((g + 0.055) / 1.055), 2.4);
         }
 
-        if (b <= 0.03928) {
+        if (b &lt;= 0.03928) {
             b = b / 12.92;
         } else {
             b = pow(((b + 0.055) / 1.055), 2.4);
@@ -1240,7 +1279,7 @@ function isString (_obj) {
  * @returns {boolean} whether the condition is true or false
  **/
 function isNumber (_obj) {
-    return oProto.toString.call(_obj) === "[object Number]" && !isNaN(_obj);
+    return oProto.toString.call(_obj) === "[object Number]" &amp;&amp; !isNaN(_obj);
 }
 
 /**
@@ -1251,7 +1290,7 @@ function isNumber (_obj) {
  * @returns {boolean} whether the condition is true or false
  **/
 function isElement (_obj) {
-    return !!(_obj && _obj.nodeType === 1);
+    return !!(_obj &amp;&amp; _obj.nodeType === 1);
 }
 
 /**
@@ -1263,7 +1302,7 @@ function isElement (_obj) {
  **/
 function isObject (_obj) {
     var type = typeof _obj;
-    return type === "function" || type === "object" && !!_obj;
+    return type === "function" || type === "object" &amp;&amp; !!_obj;
 }
 
 /**
@@ -1274,7 +1313,7 @@ function isObject (_obj) {
  * @returns {boolean} whether the condition is true or false
  **/
 function isFunction (_obj) {
-    if ( typeof /./ !== "function" && typeof Int8Array !== "object" ) {
+    if ( typeof /./ !== "function" &amp;&amp; typeof Int8Array !== "object" ) {
         return typeof _obj === "function" || false;
     }
     return oProto.toString.call(_obj) === "[object Function]";
@@ -1289,7 +1328,7 @@ function isFunction (_obj) {
  **/
 function to360Degrees(_deg) {
     if ( isNumber(_deg) ) {
-        while ( _deg < 0 ) {
+        while ( _deg &lt; 0 ) {
             _deg += 360;
         }
 
@@ -1353,7 +1392,7 @@ function rgb2hsl (_r, _g, _b) {
         s = l > 0.5 ? d / (2 - maximum - minimum) : d / (maximum + minimum);
         switch ( maximum ) {
         case r: 
-            h = (g - b) / d + (g < b ? 6 : 0); 
+            h = (g - b) / d + (g &lt; b ? 6 : 0); 
             break;
         case g: 
             h = (b - r) / d + 2; 
@@ -1366,6 +1405,22 @@ function rgb2hsl (_r, _g, _b) {
     }
     return {h:h, s:s, l:l};
 }
+</code></pre>
+        </article>
+    </section>
 
-},{}]},{},[1])(1)
-});
+
+
+
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.3</a> on Fri Mar 03 2017 21:45:19 GMT+0100 (CET) using the Minami theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/linenumber.js"></script>
+</body>
+</html>
