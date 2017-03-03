@@ -118,4 +118,4 @@ gold.equals("#FFF")      // Checks if the color is equal to the argument
 ```
 
 ### Documentation
-The full documentation of the module can be found [here](https://github.com/mortzdk/colorinterpreter/docs/).
+The full documentation of the module can be found [here](https://github.com/mortzdk/colorinterpreter/tree/master/docs).
