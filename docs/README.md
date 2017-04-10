@@ -2,8 +2,8 @@
 
 ## ColorInterpreter
 <p>A module to parse browser color strings as defined by: 
-[https://developer.mozilla.org/en-US/docs/Web/CSS/color_value](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value). The 
-module has two classes Color and ColorError.</p>
+[Mozilla](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value).
+The module has two classes Color and ColorError.</p>
 <p>The Color class is the class that interprets a color string. This is done
 by constructing a new Color object instance with a color string as the 
 argument. Once created, the Color object is able to parse the original color 
@@ -11,7 +11,7 @@ string as any browser color type, currently: HEX, HEXA, RGB, RGBA, HSL, HSLA,
 and color keywords.</p>
 <p>The ColorError class is used whenever the parsing of a color goes wrong.</p>
 
-**Version**: 1.0.1  
+**Version**: 1.0.2  
 **Example**  
 ```js
 // A typical usage of the Color object. Here the "gold" string could be
@@ -71,7 +71,7 @@ try {
                 * [.HEX](#module_ColorInterpreter.Color.HEX) : <code>string</code>
                 * [.HEXA](#module_ColorInterpreter.Color.HEXA) : <code>string</code>
                 * [.KEYWORD](#module_ColorInterpreter.Color.KEYWORD) : <code>string</code>
-                * [.hasBrowserSupport(_scheme)](#module_ColorInterpreter.Color.hasBrowserSupport) ⇒ <code>Boolean</code> &#124; <code>Object</code>
+                * [.hasBrowserSupport(_scheme)](#module_ColorInterpreter.Color.hasBrowserSupport) ⇒ <code>Boolean</code> \| <code>Object</code>
                 * [.addKeyword(_name, _color)](#module_ColorInterpreter.Color.addKeyword)
             * _inner_
                 * [~fixed](#module_ColorInterpreter.Color..fixed) : <code>number</code>
@@ -128,7 +128,7 @@ equalness and difference.</p>
         * [.HEX](#module_ColorInterpreter.Color.HEX) : <code>string</code>
         * [.HEXA](#module_ColorInterpreter.Color.HEXA) : <code>string</code>
         * [.KEYWORD](#module_ColorInterpreter.Color.KEYWORD) : <code>string</code>
-        * [.hasBrowserSupport(_scheme)](#module_ColorInterpreter.Color.hasBrowserSupport) ⇒ <code>Boolean</code> &#124; <code>Object</code>
+        * [.hasBrowserSupport(_scheme)](#module_ColorInterpreter.Color.hasBrowserSupport) ⇒ <code>Boolean</code> \| <code>Object</code>
         * [.addKeyword(_name, _color)](#module_ColorInterpreter.Color.addKeyword)
     * _inner_
         * [~fixed](#module_ColorInterpreter.Color..fixed) : <code>number</code>
@@ -141,7 +141,7 @@ equalness and difference.</p>
 <a name="new_module_ColorInterpreter.Color_new"></a>
 
 #### new Color(_color, [_context])
-**Returns**: <code>Color</code> - <p>A new Color Object.</p>  
+**Returns**: <code>Color</code> - <p>A new Color Object that can be checked for validity.</p>  
 **Throws**:
 
 - <code>ColorError</code> <p>A ColorError describing what went wrong.</p>
@@ -177,7 +177,7 @@ console.log(gold.toKeyword());        // gold
 <a name="module_ColorInterpreter.Color+toPercentageRGB"></a>
 
 #### color.toPercentageRGB() ⇒ <code>string</code>
-<p>Generates the parsed color as a RGB string.</p>
+<p>Generates the parsed color as a percentage RGB string.</p>
 
 **Kind**: instance method of <code>[Color](#module_ColorInterpreter.Color)</code>  
 **Returns**: <code>string</code> - <p>The generated RGB string</p>  
@@ -191,7 +191,7 @@ console.log(gold.toKeyword());        // gold
 <a name="module_ColorInterpreter.Color+toPercentageRGBA"></a>
 
 #### color.toPercentageRGBA() ⇒ <code>string</code>
-<p>Generates the parsed color as a RGBA string.</p>
+<p>Generates the parsed color as a percentage RGBA string.</p>
 
 **Kind**: instance method of <code>[Color](#module_ColorInterpreter.Color)</code>  
 **Returns**: <code>string</code> - <p>The generated RGBA string</p>  
@@ -242,7 +242,7 @@ string.</p>
 
 | Param | Type | Description |
 | --- | --- | --- |
-| _scheme | <code>string</code> | <p>The color scheme to test for support.</p> |
+| _scheme | <code>string</code> | <p>The color scheme to output.</p> |
 
 **Example**  
 ```js
@@ -295,7 +295,7 @@ constructed with a color that it was able to parse.</p>
 
 | Param | Type | Description |
 | --- | --- | --- |
-| _color | <code>Color</code> &#124; <code>String</code> | <p>A Color object or color string.</p> |
+| _color | <code>Color</code> \| <code>String</code> | <p>A Color object or color string.</p> |
 
 <a name="module_ColorInterpreter.Color+clone"></a>
 
@@ -340,15 +340,15 @@ constructed with a color that it was able to parse.</p>
 
 #### color.brightness() ⇒ <code>number</code>
 <p>Returns the brightness value as defined by 
-[https://www.w3.org/TR/AERT#color-contrast](https://www.w3.org/TR/AERT#color-contrast).</p>
+[w3](https://www.w3.org/TR/AERT#color-contrast).</p>
 
 **Kind**: instance method of <code>[Color](#module_ColorInterpreter.Color)</code>  
 **Returns**: <code>number</code> - <p>The brightness value</p>  
 <a name="module_ColorInterpreter.Color+difference"></a>
 
 #### color.difference(_color) ⇒ <code>number</code>
-<p>Returns the brightness value as defined by 
-[https://www.w3.org/TR/AERT#color-contrast](https://www.w3.org/TR/AERT#color-contrast).</p>
+<p>Returns the color difference value as defined by 
+[w3](https://www.w3.org/TR/AERT#color-contrast).</p>
 
 **Kind**: instance method of <code>[Color](#module_ColorInterpreter.Color)</code>  
 **Returns**: <code>number</code> - <p>The difference value or -1 if color parameter was not
@@ -360,13 +360,14 @@ a color.</p>
 
 | Param | Type | Description |
 | --- | --- | --- |
-| _color | <code>Color</code> &#124; <code>String</code> | <p>A Color object or color string.</p> |
+| _color | <code>Color</code> \| <code>String</code> | <p>A Color object or color string.</p> |
 
 <a name="module_ColorInterpreter.Color+luminance"></a>
 
 #### color.luminance() ⇒ <code>number</code>
 <p>Returns the luminance value as defined by
-[http://www.w3.org/TR/2008/REC-WCAG20-20081211/#relativeluminancedef](http://www.w3.org/TR/2008/REC-WCAG20-20081211/#relativeluminancedef)</p>
+{@link 
+http://www.w3.org/TR/2008/REC-WCAG20-20081211/#relativeluminancedef|w3}</p>
 
 **Kind**: instance method of <code>[Color](#module_ColorInterpreter.Color)</code>  
 **Returns**: <code>number</code> - <p>The luminance value</p>  
@@ -374,46 +375,39 @@ a color.</p>
 
 #### Color.RGB : <code>string</code>
 **Kind**: static constant of <code>[Color](#module_ColorInterpreter.Color)</code>  
-**Default**: <code>&quot;\&quot;rgb\&quot;&quot;</code>  
 <a name="module_ColorInterpreter.Color.RGBA"></a>
 
 #### Color.RGBA : <code>string</code>
 **Kind**: static constant of <code>[Color](#module_ColorInterpreter.Color)</code>  
-**Default**: <code>&quot;\&quot;rgba\&quot;&quot;</code>  
 <a name="module_ColorInterpreter.Color.HSL"></a>
 
 #### Color.HSL : <code>string</code>
 **Kind**: static constant of <code>[Color](#module_ColorInterpreter.Color)</code>  
-**Default**: <code>&quot;\&quot;hsl\&quot;&quot;</code>  
 <a name="module_ColorInterpreter.Color.HSLA"></a>
 
 #### Color.HSLA : <code>string</code>
 **Kind**: static constant of <code>[Color](#module_ColorInterpreter.Color)</code>  
-**Default**: <code>&quot;\&quot;hsla\&quot;&quot;</code>  
 <a name="module_ColorInterpreter.Color.HEX"></a>
 
 #### Color.HEX : <code>string</code>
 **Kind**: static constant of <code>[Color](#module_ColorInterpreter.Color)</code>  
-**Default**: <code>&quot;\&quot;hex\&quot;&quot;</code>  
 <a name="module_ColorInterpreter.Color.HEXA"></a>
 
 #### Color.HEXA : <code>string</code>
 **Kind**: static constant of <code>[Color](#module_ColorInterpreter.Color)</code>  
-**Default**: <code>&quot;\&quot;hexa\&quot;&quot;</code>  
 <a name="module_ColorInterpreter.Color.KEYWORD"></a>
 
 #### Color.KEYWORD : <code>string</code>
 **Kind**: static constant of <code>[Color](#module_ColorInterpreter.Color)</code>  
-**Default**: <code>&quot;\&quot;keyword\&quot;&quot;</code>  
 <a name="module_ColorInterpreter.Color.hasBrowserSupport"></a>
 
-#### Color.hasBrowserSupport(_scheme) ⇒ <code>Boolean</code> &#124; <code>Object</code>
+#### Color.hasBrowserSupport(_scheme) ⇒ <code>Boolean</code> \| <code>Object</code>
 <p>Checks for support of the given browser-color-scheme. This feature is only 
 available in javascript versions with a DOM model such as javascript in 
 browsers.</p>
 
 **Kind**: static method of <code>[Color](#module_ColorInterpreter.Color)</code>  
-**Returns**: <code>Boolean</code> &#124; <code>Object</code> - <p>Whether there exists support for the scheme. 
+**Returns**: <code>Boolean</code> \| <code>Object</code> - <p>Whether there exists support for the scheme. 
 The special case of keywords returns an object of booleans representing
 the support of CSS1, CSS2, CSS3, and CSS4 keywords.</p>  
 
@@ -447,7 +441,7 @@ console.log(Color.hasBrowserSupport(Color.Keyword));    // {CSS1:true||false, CS
 | Param | Type | Description |
 | --- | --- | --- |
 | _name | <code>string</code> | <p>The name of the keyword</p> |
-| _color | <code>String</code> &#124; <code>Color</code> | <p>A initialized color object or color string.</p> |
+| _color | <code>String</code> \| <code>Color</code> | <p>A initialized color object or color string.</p> |
 
 <a name="module_ColorInterpreter.Color..fixed"></a>
 
@@ -455,16 +449,14 @@ console.log(Color.hasBrowserSupport(Color.Keyword));    // {CSS1:true||false, CS
 <p>The fixed value</p>
 
 **Kind**: inner property of <code>[Color](#module_ColorInterpreter.Color)</code>  
-**Default**: <code>2</code>  
-**Access:** protected  
+**Access**: protected  
 <a name="module_ColorInterpreter.Color..valid"></a>
 
 #### Color~valid : <code>boolean</code>
 <p>The valid value</p>
 
 **Kind**: inner property of <code>[Color](#module_ColorInterpreter.Color)</code>  
-**Default**: <code>true</code>  
-**Access:** protected  
+**Access**: protected  
 <a name="module_ColorInterpreter.Color..r"></a>
 
 #### Color~r : <code>number</code>
@@ -496,7 +488,7 @@ console.log(Color.hasBrowserSupport(Color.Keyword));    // {CSS1:true||false, CS
 browser color string.</p>
 
 **Kind**: inner class of <code>[ColorInterpreter](#module_ColorInterpreter)</code>  
-**Extends:** <code>Error</code>  
+**Extends**: <code>Error</code>  
 <a name="new_module_ColorInterpreter..ColorError_new"></a>
 
 #### new ColorError(_message)
