@@ -2,8 +2,8 @@
 
 /**
  * A module to parse browser color strings as defined by: 
- * {@link https://developer.mozilla.org/en-US/docs/Web/CSS/color_value}. The 
- * module has two classes Color and ColorError.
+ * {@link https://developer.mozilla.org/en-US/docs/Web/CSS/color_value|Mozilla}.
+ * The module has two classes Color and ColorError.
  *
  * The Color class is the class that interprets a color string. This is done
  * by constructing a new Color object instance with a color string as the 
@@ -14,7 +14,7 @@
  * The ColorError class is used whenever the parsing of a color goes wrong.
  *
  * @module ColorInterpreter
- * @version 1.0.1
+ * @version 1.0.2
  *
  * @example
  * // A typical usage of the Color object. Here the "gold" string could be
@@ -498,7 +498,7 @@ var support,
  * @param {Element} [_context] - An element for which to calculate the
  * currentColor keyword.
  * @throws {ColorError} A ColorError describing what went wrong.
- * @returns {Color} A new Color Object.
+ * @returns {Color} A new Color Object that can be checked for validity.
  *
  * @example
  * // A typical usage of the Color object. Here the "gold" string could be
@@ -526,7 +526,7 @@ function Color (_color, _context) {
      * @protected
      * @member module:ColorInterpreter.Color~fixed
      * @type {number}
-     * @default 2
+     * @default
      */
     self.fixed = 2;
 
@@ -535,7 +535,7 @@ function Color (_color, _context) {
      * @protected
      * @member module:ColorInterpreter.Color~valid
      * @type {boolean}
-     * @default true 
+     * @default 
      */
     self.valid = true;
 
@@ -663,7 +663,7 @@ Color.prototype = {
     },
 
     /**
-     * Generates the parsed color as a RGB string.
+     * Generates the parsed color as a percentage RGB string.
      * @method module:ColorInterpreter.Color#toPercentageRGB
      * @returns {string} The generated RGB string
      */
@@ -687,7 +687,7 @@ Color.prototype = {
     },
 
     /**
-     * Generates the parsed color as a RGBA string.
+     * Generates the parsed color as a percentage RGBA string.
      * @method module:ColorInterpreter.Color#toPercentageRGBA
      * @returns {string} The generated RGBA string
      */
@@ -772,7 +772,7 @@ Color.prototype = {
     /**
      * Returns a string representation of the color object
      * @method module:ColorInterpreter.Color#toString
-     * @param {string} _scheme - The color scheme to test for support. 
+     * @param {string} _scheme - The color scheme to output. 
      * @returns {string} A color string of the given scheme or a HEX color 
      * string.
      * @example
@@ -910,7 +910,7 @@ Color.prototype = {
     
     /**
      * Returns the brightness value as defined by 
-     * {@link https://www.w3.org/TR/AERT#color-contrast}.
+     * {@link https://www.w3.org/TR/AERT#color-contrast|w3}.
      * @method module:ColorInterpreter.Color#brightness
      * @returns {number} The brightness value
      */
@@ -920,8 +920,8 @@ Color.prototype = {
     },
 
     /**
-     * Returns the brightness value as defined by 
-     * {@link https://www.w3.org/TR/AERT#color-contrast}.
+     * Returns the color difference value as defined by 
+     * {@link https://www.w3.org/TR/AERT#color-contrast|w3}.
      * @method module:ColorInterpreter.Color#difference
      * @param {Color|String} _color - A Color object or color string. 
      * @throws {ColorError} A ColorError describing what went wrong.
@@ -947,7 +947,8 @@ Color.prototype = {
 
     /**
      * Returns the luminance value as defined by
-     * {@link http://www.w3.org/TR/2008/REC-WCAG20-20081211/#relativeluminancedef}
+     * {@link 
+     * http://www.w3.org/TR/2008/REC-WCAG20-20081211/#relativeluminancedef|w3}
      * @method module:ColorInterpreter.Color#luminance
      * @returns {number} The luminance value
      */
@@ -1006,58 +1007,93 @@ Color.prototype.constructor = Color;
  * console.log(Color.hasBrowserSupport(Color.Keyword));    // {CSS1:true||false, CSS2:true||false, CSS3:true||false, CSS4:true||false}
  */
 Color.hasBrowserSupport = function (_scheme) {
-    var div, css1, css2, css3, css4, result;
+    var div, result, css1, css2, css3, css4, color;
 
     if ( !support ) {
-        support           = {};
-        div               = document.createElement("div");
+        support = {};
+        css1 = css2 = css3 = css4 = false;
+        color = new Color("blue");
+        div = document.createElement("div");
 
         // Test RGB
-        div.style.cssText = "color:rgb(9,9,9)";
-        support.rgb       = div.style.color.indexOf("rgb") > -1;
+        div.style.cssText = "color:" + color.toRGB();
+        try {
+            support.rgb = color.equals(div.style.color);
+        } catch (ignore) {
+            support.rgb = false;
+        }
 
         // Test RGBA
-        div.style.cssText = "color:rgba(9,9,9,0)";
-        support.rgba      = div.style.color.indexOf("rgba") > -1;
+        color.a = 0;
+        div.style.cssText = "color:" + color.toRGBA();
+        try {
+            support.rgba = color.equals(div.style.color);
+        } catch (ignore) {
+            support.rgba = false;
+        }
+        color.a = 1;
 
         // Test HSL
-        div.style.cssText = "color:hsl(9,9%,9%)";
-        support.hsl       = div.style.color.indexOf("hsl") > -1;
+        div.style.cssText = "color:" + color.toHSL();
+        try {
+            support.hsl = color.equals(div.style.color);
+        } catch (ignore) {
+            support.hsl = false;
+        }
 
         // Test HSLA
-        div.style.cssText = "color:hsla(9,9%,9%,0)";
-        support.hsla      = div.style.color.indexOf("hsla") > -1;
-
-        // Test HEXA
-        div.style.cssText = "color:#FA38";
+        color.a = 0;
+        div.style.cssText = "color:" + color.toHSLA();
         try {
-            support.hexa  = new Color(div.style.color).isValid();
+            support.hsla = color.equals(div.style.color);
         } catch (ignore) {
-            div.style.cssText = "color:#FFAA3388";
-            try {
-                support.hexa  = new Color(div.style.color).isValid();
-            } catch (ignore) {
-                support.hexa  = false;
-            }
+            support.hsla = false;
         }
+        color.a = 1;
 
         // Test HEX
-        div.style.cssText = "color:#ABABAB";
+        div.style.cssText = "color:" + color.toHEX();
         try {
-            support.hex  = new Color(div.style.color).equals("#ABABAB");
+            support.hex = color.equals(div.style.color);
         } catch (ignore) {
-            support.hex  = false;
+            support.hex = false;
         }
+
+        // Test HEXA
+        color.a = 0;
+        div.style.cssText = "color:#00F0";
+        try {
+            support.hexa = color.equals(div.style.color);
+        } catch (ignore) {
+            div.style.cssText = "color:" + color.toHEXA();
+            try {
+                support.hexa = color.equals(div.style.color);
+            } catch (ignore) {
+                support.hexa = false;
+            }
+        }
+        color.a = 1;
 
         // Keywords
         div.style.cssText = "color:red";
-        css1              = div.style.color.indexOf("red") > -1;
+        try {
+            css1 = (new Color("red")).equals(div.style.color);
+        } catch (ignore) {/*ignore*/}
+
         div.style.cssText = "color:gold";
-        css2              = div.style.color.indexOf("gold") > -1;
+        try {
+            css2 = (new Color("gold")).equals(div.style.color);
+        } catch (ignore) {/*ignore*/}
+
         div.style.cssText = "color:tan";
-        css3              = div.style.color.indexOf("tan") > -1;
+        try {
+            css3 = (new Color("tan")).equals(div.style.color);
+        } catch (ignore) {/*ignore*/}
+
         div.style.cssText = "color:rebeccapurple";
-        css4              = div.style.color.indexOf("rebeccapurple") > -1;
+        try {
+            css4 = (new Color("rebeccapurple")).equals(div.style.color);
+        } catch (ignore) {/*ignore*/}
 
         support.keyword   = {
             CSS1 : css1,
@@ -1083,7 +1119,7 @@ Color.hasBrowserSupport = function (_scheme) {
  * @throws {ColorError} A ColorError describing what went wrong.
  */
 Color.addKeyword = function (_name, _color) {
-    var color = _color;
+    var hexa, color = _color;
 
     if ( !isString(_name) ) {
         throw new ColorError("Keyword name must be of type String");
@@ -1097,8 +1133,9 @@ Color.addKeyword = function (_name, _color) {
         throw new ColorError("Could not parse the color for the keyword");
     }
 
-    keywords2colors[_name] = color.toHEXA().toLowerCase();
-    colors2keywords[color.toHEXA().toLowerCase()] = _name;
+    hexa                   = color.toHEXA().toLowerCase();
+    keywords2colors[_name] = hexa;
+    colors2keywords[hexa]  = _name;
 
     return this;
 };
@@ -1108,7 +1145,7 @@ Color.addKeyword = function (_name, _color) {
  * @name module:ColorInterpreter.Color.RGB
  * @constant
  * @type string
- * @default "rgb"
+ * @default
  */
 Color.RGB      = "rgb";
 
@@ -1117,7 +1154,7 @@ Color.RGB      = "rgb";
  * @name module:ColorInterpreter.Color.RGBA
  * @constant
  * @type string
- * @default "rgba"
+ * @default
  */
 Color.RGBA     = "rgba";
 
@@ -1126,7 +1163,7 @@ Color.RGBA     = "rgba";
  * @name module:ColorInterpreter.Color.HSL
  * @constant
  * @type string
- * @default "hsl"
+ * @default
  */
 Color.HSL      = "hsl";
 
@@ -1135,7 +1172,7 @@ Color.HSL      = "hsl";
  * @name module:ColorInterpreter.Color.HSLA
  * @constant
  * @type string
- * @default "hsla"
+ * @default
  */
 Color.HSLA     = "hsla";
 
@@ -1145,7 +1182,7 @@ Color.HSLA     = "hsla";
  * @name module:ColorInterpreter.Color.HEX
  * @constant
  * @type string
- * @default "hex"
+ * @default
  */
 Color.HEX      = "hex";
 
@@ -1154,7 +1191,7 @@ Color.HEX      = "hex";
  * @name module:ColorInterpreter.Color.HEXA
  * @constant
  * @type string
- * @default "hexa"
+ * @default
  */
 Color.HEXA     = "hexa";
 
@@ -1163,7 +1200,7 @@ Color.HEXA     = "hexa";
  * @name module:ColorInterpreter.Color.KEYWORD
  * @constant
  * @type string
- * @default "keyword"
+ * @default
  */
 Color.KEYWORD  = "keyword";
 

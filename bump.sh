@@ -35,6 +35,7 @@ if [ -d ".git" ]; then
 		version=${output:1}
         bump_bower "bower.json"
         bump_js "index.js"
+        npm run build
 		git add .
 		git commit -m "Bump to ${version}"
         npm publish ./

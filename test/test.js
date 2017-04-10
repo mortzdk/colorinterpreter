@@ -55,8 +55,8 @@ var Color  = require("..").Color,
     };
 
 t("Should parse keywords without throwing ColorError", function (_t) {
-    var c1, c2, c3, c4, c5, c6;
-    _t.plan(7);
+    var c1, c2, c3, c4, c5, c6, c7;
+    _t.plan(8);
     _t.doesNotThrow(function () {
         c1 = Color("red");
         c2 = Color("green");
@@ -64,6 +64,7 @@ t("Should parse keywords without throwing ColorError", function (_t) {
         c4 = new Color("darkmagenta");
         c5 = new Color("lightseagreen");
         c6 = new Color("hotpink");
+        c7 = new Color("transparent");
     });
     _t.ok(c1.isValid());
     _t.ok(c2.isValid());
@@ -71,6 +72,7 @@ t("Should parse keywords without throwing ColorError", function (_t) {
     _t.ok(c4.isValid());
     _t.ok(c5.isValid());
     _t.ok(c6.isValid());
+    _t.ok(c7.isValid());
     _t.end();
 });
 

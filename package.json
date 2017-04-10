@@ -1,6 +1,6 @@
 {
   "name": "colorinterpreter",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "ColorInterpreter is a module able to convert any acceptable browser color-scheme to any other acceptable browser color-scheme.",
   "homepage": "https://github.com/mortzdk/colorinterpreter",
   "repository": {
@@ -33,16 +33,16 @@
   "dependencies": {
     "jsdoc": "^3.4.3",
     "jsdoc-to-markdown": "^3.0.0",
-    "uglify-js": "^2.8.5",
+    "uglify-js": "^2.8.22",
     "minami": "1.1.1"
   },
   "devDependencies": {
-    "browserify": "^14.1.0",
-    "eslint": "^3.16.1",
+    "browserify": "^14.3.0",
+    "eslint": "^3.19.0",
     "faucet": "0.0.1",
     "istanbul": "~0.4.5",
     "tape": "^4.6.3",
-    "coveralls": "^2.11.16"
+    "coveralls": "^2.13.0"
   },
   "scripts": {
     "test": "eslint index.js test/test.js && node test/test.js | faucet",
@@ -53,7 +53,7 @@
     "doc": "jsdoc --pedantic --configure .jsdoc.json --verbose index.js",
     "documentation": "npm run doc",
     "dist": "npm run build",
-    "build": "npm run test && npm run cov && npm run doc && npm run markdown && mkdir -p dist && browserify index.js -s ColorInterpreter -o dist/colorinterpreter.js && uglifyjs -c -m -o dist/colorinterpreter.min.js --source-map dist/colorinterpreter.min.js.map -v -- dist/colorinterpreter.js",
+    "build": "npm run clean && npm run test && npm run cov && npm run doc && npm run markdown && mkdir -p dist && browserify index.js -s ColorInterpreter -o dist/colorinterpreter.js && uglifyjs -c -m -o dist/colorinterpreter.min.js --source-map dist/colorinterpreter.min.js.map -v -- dist/colorinterpreter.js",
     "clean": "rm -rf coverage && rm -rf dist"
   },
   "eslintConfig": {
