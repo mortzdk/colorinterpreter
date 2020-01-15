@@ -1240,7 +1240,7 @@ function ColorError(_message) {
     self.message = _message;
 }
 
-if ( "setPrototypeOf" in Object ) {
+if ( !!Object.setPrototypeOf ) {
     Object.setPrototypeOf(ColorError, Error);
 } else {
     ColorError.__proto__ = Error;
