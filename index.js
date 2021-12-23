@@ -14,7 +14,7 @@
  * The ColorError class is used whenever the parsing of a color goes wrong.
  *
  * @module ColorInterpreter
- * @version 
+ * @version 1.0.3
  *
  * @example
  * // A typical usage of the Color object. Here the "gold" string could be
@@ -1240,7 +1240,7 @@ function ColorError(_message) {
     self.message = _message;
 }
 
-if ( !!Object.setPrototypeOf ) {
+if ( Object.setPrototypeOf ) {
     Object.setPrototypeOf(ColorError, Error);
 } else {
     ColorError.__proto__ = Error;
