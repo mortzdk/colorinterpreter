@@ -143,38 +143,31 @@ t("Should parse keyword to other formats", function (_t) {
         }
 
         _t.ok(
-            colors[_name].hex
-                         .some(function(_s){return _s===color.toHEX();}),
+            colors[_name].hex.some(function(_s){return _s===color.toHEX();}),
             "Correct HEX value"
         );
         _t.ok(
-            colors[_name].hexa
-                         .some(function(_s){return _s===color.toHEXA();}),
+            colors[_name].hexa.some(function(_s){return _s===color.toHEXA();}),
             "Correct HEXA value"
         );
         _t.ok(
-            colors[_name].rgb
-                         .some(function(_s){return _s===color.toPercentageRGB();}),
+            colors[_name].rgb.some(function(_s){return _s===color.toPercentageRGB();}),
             "Correct RGB value"
         );
         _t.ok(
-            colors[_name].rgba
-                         .some(function(_s){return _s===color.toPercentageRGBA();}),
+            colors[_name].rgba.some(function(_s){return _s===color.toPercentageRGBA();}),
             "Correct RGBA value"
         );
         _t.ok(
-            colors[_name].hsl
-                         .some(function(_s){return _s===color.toHSL();}),
+            colors[_name].hsl.some(function(_s){return _s===color.toHSL();}),
             "Correct HSL value"
         );
         _t.ok(
-            colors[_name].hsla
-                         .some(function(_s){return _s===color.toHSLA();}),
+            colors[_name].hsla.some(function(_s){return _s===color.toHSLA();}),
             "Correct HSLA value"
         );
         _t.ok(
-            colors[_name].keyword
-                         .some(function(_s){return _s===color.toKeyword();}),
+            colors[_name].keyword.some(function(_s){return _s===color.toKeyword();}),
             "Correct Keyword value"
         );
     });
@@ -194,40 +187,33 @@ t("Should parse 3-lengthed HEX to other formats", function (_t) {
             }
 
             _t.ok(
-                colors[_name].hex
-                             .some(function(_s){return _s===color.toHEX();}),
+                colors[_name].hex.some(function(_s){return _s===color.toHEX();}),
                 "Correct HEX value"
             );
             _t.ok(
-                colors[_name].hexa
-                             .some(function(_s){return _s===color.toHEXA();}),
+                colors[_name].hexa.some(function(_s){return _s===color.toHEXA();}),
                 "Correct HEXA value"
             );
             _t.ok(
-                colors[_name].rgb
-                             .some(function(_s){return _s===color.toPercentageRGB();}),
+                colors[_name].rgb.some(function(_s){return _s===color.toPercentageRGB();}),
                 "Correct RGB value"
             );
             _t.ok(
-                colors[_name].rgba
-                             .some(function(_s){return _s===color.toPercentageRGBA();}),
+                colors[_name].rgba.some(function(_s){return _s===color.toPercentageRGBA();}),
                 "Correct RGBA value"
             );
             _t.ok(
-                colors[_name].hsl
-                             .some(function(_s){return _s===color.toHSL();}),
+                colors[_name].hsl.some(function(_s){return _s===color.toHSL();}),
                 "Correct HSL value"
             );
             _t.ok(
-                colors[_name].hsla
-                             .some(function(_s){return _s===color.toHSLA();}),
+                colors[_name].hsla.some(function(_s){return _s===color.toHSLA();}),
                 "Correct HSLA value"
             );
             _t.ok(
-                colors[_name].keyword
-                             .some(
-                                 function(_s){return _s===color.toKeyword();}
-                             ),
+                colors[_name].keyword.some(
+                    function(_s){return _s===color.toKeyword();}
+                ),
                 "Correct Keyword value"
             );
         }
@@ -248,40 +234,33 @@ t("Should parse 4-lengthed HEX to other formats", function (_t) {
             }
 
             _t.ok(
-                colors[_name].hex
-                             .some(function(_s){return _s===color.toHEX();}),
+                colors[_name].hex.some(function(_s){return _s===color.toHEX();}),
                 "Correct HEX value"
             );
             _t.ok(
-                colors[_name].hexa
-                             .some(function(_s){return _s===color.toHEXA();}),
+                colors[_name].hexa.some(function(_s){return _s===color.toHEXA();}),
                 "Correct HEXA value"
             );
             _t.ok(
-                colors[_name].rgb
-                             .some(function(_s){return _s===color.toPercentageRGB();}),
+                colors[_name].rgb.some(function(_s){return _s===color.toPercentageRGB();}),
                 "Correct RGB value"
             );
             _t.ok(
-                colors[_name].rgba
-                             .some(function(_s){return _s===color.toPercentageRGBA();}),
+                colors[_name].rgba.some(function(_s){return _s===color.toPercentageRGBA();}),
                 "Correct RGBA value"
             );
             _t.ok(
-                colors[_name].hsl
-                             .some(function(_s){return _s===color.toHSL();}),
+                colors[_name].hsl.some(function(_s){return _s===color.toHSL();}),
                 "Correct HSL value"
             );
             _t.ok(
-                colors[_name].hsla
-                             .some(function(_s){return _s===color.toHSLA();}),
+                colors[_name].hsla.some(function(_s){return _s===color.toHSLA();}),
                 "Correct HSLA value"
             );
             _t.ok(
-                colors[_name].keyword
-                             .some(
-                                 function(_s){return _s===color.toKeyword();}
-                             ),
+                colors[_name].keyword.some(
+                    function(_s){return _s===color.toKeyword();}
+                ),
                 "Correct Keyword value"
             );
         }
@@ -301,38 +280,31 @@ t("Should parse 6-lengthed HEX to other formats", function (_t) {
         }
 
         _t.ok(
-            colors[_name].hex
-                         .some(function(_s){return _s===color.toHEX();}),
+            colors[_name].hex.some(function(_s){return _s===color.toHEX();}),
             "Correct HEX value"
         );
         _t.ok(
-            colors[_name].hexa
-                         .some(function(_s){return _s===color.toHEXA();}),
+            colors[_name].hexa.some(function(_s){return _s===color.toHEXA();}),
             "Correct HEXA value"
         );
         _t.ok(
-            colors[_name].rgb
-                         .some(function(_s){return _s===color.toPercentageRGB();}),
+            colors[_name].rgb.some(function(_s){return _s===color.toPercentageRGB();}),
             "Correct RGB value"
         );
         _t.ok(
-            colors[_name].rgba
-                         .some(function(_s){return _s===color.toPercentageRGBA();}),
+            colors[_name].rgba.some(function(_s){return _s===color.toPercentageRGBA();}),
             "Correct RGBA value"
         );
         _t.ok(
-            colors[_name].hsl
-                         .some(function(_s){return _s===color.toHSL();}),
+            colors[_name].hsl.some(function(_s){return _s===color.toHSL();}),
             "Correct HSL value"
         );
         _t.ok(
-            colors[_name].hsla
-                         .some(function(_s){return _s===color.toHSLA();}),
+            colors[_name].hsla.some(function(_s){return _s===color.toHSLA();}),
             "Correct HSLA value"
         );
         _t.ok(
-            colors[_name].keyword
-                         .some(function(_s){return _s===color.toKeyword();}),
+            colors[_name].keyword.some(function(_s){return _s===color.toKeyword();}),
             "Correct Keyword value"
         );
     });
@@ -348,38 +320,31 @@ t("Should parse 8-lengthed HEX to other formats", function (_t) {
         color = new Color(colors[_name].hexa[0]);
 
         _t.ok(
-            colors[_name].hex
-                         .some(function(_s){return _s===color.toHEX();}),
+            colors[_name].hex.some(function(_s){return _s===color.toHEX();}),
             "Correct HEX value"
         );
         _t.ok(
-            colors[_name].hexa
-                         .some(function(_s){return _s===color.toHEXA();}),
+            colors[_name].hexa.some(function(_s){return _s===color.toHEXA();}),
             "Correct HEXA value"
         );
         _t.ok(
-            colors[_name].rgb
-                         .some(function(_s){return _s===color.toPercentageRGB();}),
+            colors[_name].rgb.some(function(_s){return _s===color.toPercentageRGB();}),
             "Correct RGB value"
         );
         _t.ok(
-            colors[_name].rgba
-                         .some(function(_s){return _s===color.toPercentageRGBA();}),
+            colors[_name].rgba.some(function(_s){return _s===color.toPercentageRGBA();}),
             "Correct RGBA value"
         );
         _t.ok(
-            colors[_name].hsl
-                         .some(function(_s){return _s===color.toHSL();}),
+            colors[_name].hsl.some(function(_s){return _s===color.toHSL();}),
             "Correct HSL value"
         );
         _t.ok(
-            colors[_name].hsla
-                         .some(function(_s){return _s===color.toHSLA();}),
+            colors[_name].hsla.some(function(_s){return _s===color.toHSLA();}),
             "Correct HSLA value"
         );
         _t.ok(
-            colors[_name].keyword
-                         .some(function(_s){return _s===color.toKeyword();}),
+            colors[_name].keyword.some(function(_s){return _s===color.toKeyword();}),
             "Correct Keyword value"
         );
     });
@@ -398,38 +363,31 @@ t("Should parse RGB to other formats", function (_t) {
         }
 
         _t.ok(
-            colors[_name].hex
-                         .some(function(_s){return _s===color.toHEX();}),
+            colors[_name].hex.some(function(_s){return _s===color.toHEX();}),
             "Correct HEX value"
         );
         _t.ok(
-            colors[_name].hexa
-                         .some(function(_s){return _s===color.toHEXA();}),
+            colors[_name].hexa.some(function(_s){return _s===color.toHEXA();}),
             "Correct HEXA value"
         );
         _t.ok(
-            colors[_name].rgb
-                         .some(function(_s){return _s===color.toPercentageRGB();}),
+            colors[_name].rgb.some(function(_s){return _s===color.toPercentageRGB();}),
             "Correct RGB value"
         );
         _t.ok(
-            colors[_name].rgba
-                         .some(function(_s){return _s===color.toPercentageRGBA();}),
+            colors[_name].rgba.some(function(_s){return _s===color.toPercentageRGBA();}),
             "Correct RGBA value"
         );
         _t.ok(
-            colors[_name].hsl
-                         .some(function(_s){return _s===color.toHSL();}),
+            colors[_name].hsl.some(function(_s){return _s===color.toHSL();}),
             "Correct HSL value"
         );
         _t.ok(
-            colors[_name].hsla
-                         .some(function(_s){return _s===color.toHSLA();}),
+            colors[_name].hsla.some(function(_s){return _s===color.toHSLA();}),
             "Correct HSLA value"
         );
         _t.ok(
-            colors[_name].keyword
-                         .some(function(_s){return _s===color.toKeyword();}),
+            colors[_name].keyword.some(function(_s){return _s===color.toKeyword();}),
             "Correct Keyword value"
         );
     });
@@ -445,38 +403,31 @@ t("Should parse RGBA to other formats", function (_t) {
         color = new Color(colors[_name].rgba[0]);
 
         _t.ok(
-            colors[_name].hex
-                         .some(function(_s){return _s===color.toHEX();}),
+            colors[_name].hex.some(function(_s){return _s===color.toHEX();}),
             "Correct HEX value"
         );
         _t.ok(
-            colors[_name].hexa
-                         .some(function(_s){return _s===color.toHEXA();}),
+            colors[_name].hexa.some(function(_s){return _s===color.toHEXA();}),
             "Correct HEXA value"
         );
         _t.ok(
-            colors[_name].rgb
-                         .some(function(_s){return _s===color.toPercentageRGB();}),
+            colors[_name].rgb.some(function(_s){return _s===color.toPercentageRGB();}),
             "Correct RGB value"
         );
         _t.ok(
-            colors[_name].rgba
-                         .some(function(_s){return _s===color.toPercentageRGBA();}),
+            colors[_name].rgba.some(function(_s){return _s===color.toPercentageRGBA();}),
             "Correct RGBA value"
         );
         _t.ok(
-            colors[_name].hsl
-                         .some(function(_s){return _s===color.toHSL();}),
+            colors[_name].hsl.some(function(_s){return _s===color.toHSL();}),
             "Correct HSL value"
         );
         _t.ok(
-            colors[_name].hsla
-                         .some(function(_s){return _s===color.toHSLA();}),
+            colors[_name].hsla.some(function(_s){return _s===color.toHSLA();}),
             "Correct HSLA value"
         );
         _t.ok(
-            colors[_name].keyword
-                         .some(function(_s){return _s===color.toKeyword();}),
+            colors[_name].keyword.some(function(_s){return _s===color.toKeyword();}),
             "Correct Keyword value"
         );
     });
@@ -495,38 +446,31 @@ t("Should parse HSL to other formats", function (_t) {
         }
 
         _t.ok(
-            colors[_name].hex
-                         .some(function(_s){return _s===color.toHEX();}),
+            colors[_name].hex.some(function(_s){return _s===color.toHEX();}),
             "Correct HEX value"
         );
         _t.ok(
-            colors[_name].hexa
-                         .some(function(_s){return _s===color.toHEXA();}),
+            colors[_name].hexa.some(function(_s){return _s===color.toHEXA();}),
             "Correct HEXA value"
         );
         _t.ok(
-            colors[_name].rgb
-                         .some(function(_s){return _s===color.toPercentageRGB();}),
+            colors[_name].rgb.some(function(_s){return _s===color.toPercentageRGB();}),
             "Correct RGB value"
         );
         _t.ok(
-            colors[_name].rgba
-                         .some(function(_s){return _s===color.toPercentageRGBA();}),
+            colors[_name].rgba.some(function(_s){return _s===color.toPercentageRGBA();}),
             "Correct RGBA value"
         );
         _t.ok(
-            colors[_name].hsl
-                         .some(function(_s){return _s===color.toHSL();}),
+            colors[_name].hsl.some(function(_s){return _s===color.toHSL();}),
             "Correct HSL value"
         );
         _t.ok(
-            colors[_name].hsla
-                         .some(function(_s){return _s===color.toHSLA();}),
+            colors[_name].hsla.some(function(_s){return _s===color.toHSLA();}),
             "Correct HSLA value"
         );
         _t.ok(
-            colors[_name].keyword
-                         .some(function(_s){return _s===color.toKeyword();}),
+            colors[_name].keyword.some(function(_s){return _s===color.toKeyword();}),
             "Correct Keyword value"
         );
     });
@@ -542,38 +486,31 @@ t("Should parse HSLA to other formats", function (_t) {
         color = new Color(colors[_name].hsla[0]);
 
         _t.ok(
-            colors[_name].hex
-                         .some(function(_s){return _s===color.toHEX();}),
+            colors[_name].hex.some(function(_s){return _s===color.toHEX();}),
             "Correct HEX value"
         );
         _t.ok(
-            colors[_name].hexa
-                         .some(function(_s){return _s===color.toHEXA();}),
+            colors[_name].hexa.some(function(_s){return _s===color.toHEXA();}),
             "Correct HEXA value"
         );
         _t.ok(
-            colors[_name].rgb
-                         .some(function(_s){return _s===color.toPercentageRGB();}),
+            colors[_name].rgb.some(function(_s){return _s===color.toPercentageRGB();}),
             "Correct RGB value"
         );
         _t.ok(
-            colors[_name].rgba
-                         .some(function(_s){return _s===color.toPercentageRGBA();}),
+            colors[_name].rgba.some(function(_s){return _s===color.toPercentageRGBA();}),
             "Correct RGBA value"
         );
         _t.ok(
-            colors[_name].hsl
-                         .some(function(_s){return _s===color.toHSL();}),
+            colors[_name].hsl.some(function(_s){return _s===color.toHSL();}),
             "Correct HSL value"
         );
         _t.ok(
-            colors[_name].hsla
-                         .some(function(_s){return _s===color.toHSLA();}),
+            colors[_name].hsla.some(function(_s){return _s===color.toHSLA();}),
             "Correct HSLA value"
         );
         _t.ok(
-            colors[_name].keyword
-                         .some(function(_s){return _s===color.toKeyword();}),
+            colors[_name].keyword.some(function(_s){return _s===color.toKeyword();}),
             "Correct Keyword value"
         );
     });
@@ -593,38 +530,31 @@ t("Should parse HSL units to other formats", function (_t) {
         }
 
         _t.ok(
-            colors["rebeccapurple"].hex
-                         .some(function(_s){return _s===color.toHEX();}),
+            colors["rebeccapurple"].hex.some(function(_s){return _s===color.toHEX();}),
             "Correct HEX value"
         );
         _t.ok(
-            colors["rebeccapurple"].hexa
-                         .some(function(_s){return _s===color.toHEXA();}),
+            colors["rebeccapurple"].hexa.some(function(_s){return _s===color.toHEXA();}),
             "Correct HEXA value"
         );
         _t.ok(
-            colors["rebeccapurple"].rgb
-                         .some(function(_s){return _s===color.toPercentageRGB();}),
+            colors["rebeccapurple"].rgb.some(function(_s){return _s===color.toPercentageRGB();}),
             "Correct RGB value"
         );
         _t.ok(
-            colors["rebeccapurple"].rgba
-                         .some(function(_s){return _s===color.toPercentageRGBA();}),
+            colors["rebeccapurple"].rgba.some(function(_s){return _s===color.toPercentageRGBA();}),
             "Correct RGBA value"
         );
         _t.ok(
-            colors["rebeccapurple"].hsl
-                         .some(function(_s){return _s===color.toHSL();}),
+            colors["rebeccapurple"].hsl.some(function(_s){return _s===color.toHSL();}),
             "Correct HSL value"
         );
         _t.ok(
-            colors["rebeccapurple"].hsla
-                         .some(function(_s){return _s===color.toHSLA();}),
+            colors["rebeccapurple"].hsla.some(function(_s){return _s===color.toHSLA();}),
             "Correct HSLA value"
         );
         _t.ok(
-            colors["rebeccapurple"].keyword
-                         .some(function(_s){return _s===color.toKeyword();}),
+            colors["rebeccapurple"].keyword.some(function(_s){return _s===color.toKeyword();}),
             "Correct Keyword value"
         );
     });
@@ -644,38 +574,31 @@ t("Should parse HSLA units to other formats", function (_t) {
         }
 
         _t.ok(
-            colors["rebeccapurple"].hex
-                         .some(function(_s){return _s===color.toHEX();}),
+            colors["rebeccapurple"].hex.some(function(_s){return _s===color.toHEX();}),
             "Correct HEX value"
         );
         _t.ok(
-            colors["rebeccapurple"].hexa
-                         .some(function(_s){return _s===color.toHEXA();}),
+            colors["rebeccapurple"].hexa.some(function(_s){return _s===color.toHEXA();}),
             "Correct HEXA value"
         );
         _t.ok(
-            colors["rebeccapurple"].rgb
-                         .some(function(_s){return _s===color.toPercentageRGB();}),
+            colors["rebeccapurple"].rgb.some(function(_s){return _s===color.toPercentageRGB();}),
             "Correct RGB value"
         );
         _t.ok(
-            colors["rebeccapurple"].rgba
-                         .some(function(_s){return _s===color.toPercentageRGBA();}),
+            colors["rebeccapurple"].rgba.some(function(_s){return _s===color.toPercentageRGBA();}),
             "Correct RGBA value"
         );
         _t.ok(
-            colors["rebeccapurple"].hsl
-                         .some(function(_s){return _s===color.toHSL();}),
+            colors["rebeccapurple"].hsl.some(function(_s){return _s===color.toHSL();}),
             "Correct HSL value"
         );
         _t.ok(
-            colors["rebeccapurple"].hsla
-                         .some(function(_s){return _s===color.toHSLA();}),
+            colors["rebeccapurple"].hsla.some(function(_s){return _s===color.toHSLA();}),
             "Correct HSLA value"
         );
         _t.ok(
-            colors["rebeccapurple"].keyword
-                         .some(function(_s){return _s===color.toKeyword();}),
+            colors["rebeccapurple"].keyword.some(function(_s){return _s===color.toKeyword();}),
             "Correct Keyword value"
         );
     });
