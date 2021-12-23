@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Home - Documentation</title>
+
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="module-ColorInterpreter.Color.html">Color</a><ul class='methods'><li data-type='method'><a href="module-ColorInterpreter.Color.html#.addKeyword">addKeyword</a></li><li data-type='method'><a href="module-ColorInterpreter.Color.html#.hasBrowserSupport">hasBrowserSupport</a></li><li data-type='method'><a href="module-ColorInterpreter.Color.html#alpha">alpha</a></li><li data-type='method'><a href="module-ColorInterpreter.Color.html#blue">blue</a></li><li data-type='method'><a href="module-ColorInterpreter.Color.html#brightness">brightness</a></li><li data-type='method'><a href="module-ColorInterpreter.Color.html#clone">clone</a></li><li data-type='method'><a href="module-ColorInterpreter.Color.html#difference">difference</a></li><li data-type='method'><a href="module-ColorInterpreter.Color.html#equals">equals</a></li><li data-type='method'><a href="module-ColorInterpreter.Color.html#green">green</a></li><li data-type='method'><a href="module-ColorInterpreter.Color.html#isValid">isValid</a></li><li data-type='method'><a href="module-ColorInterpreter.Color.html#luminance">luminance</a></li><li data-type='method'><a href="module-ColorInterpreter.Color.html#red">red</a></li><li data-type='method'><a href="module-ColorInterpreter.Color.html#setFixed">setFixed</a></li><li data-type='method'><a href="module-ColorInterpreter.Color.html#toHEX">toHEX</a></li><li data-type='method'><a href="module-ColorInterpreter.Color.html#toHEXA">toHEXA</a></li><li data-type='method'><a href="module-ColorInterpreter.Color.html#toHSL">toHSL</a></li><li data-type='method'><a href="module-ColorInterpreter.Color.html#toHSLA">toHSLA</a></li><li data-type='method'><a href="module-ColorInterpreter.Color.html#toKeyword">toKeyword</a></li><li data-type='method'><a href="module-ColorInterpreter.Color.html#toPercentageRGB">toPercentageRGB</a></li><li data-type='method'><a href="module-ColorInterpreter.Color.html#toPercentageRGBA">toPercentageRGBA</a></li><li data-type='method'><a href="module-ColorInterpreter.Color.html#toRGB">toRGB</a></li><li data-type='method'><a href="module-ColorInterpreter.Color.html#toRGBA">toRGBA</a></li><li data-type='method'><a href="module-ColorInterpreter.Color.html#toString">toString</a></li></ul></li><li><a href="module-ColorInterpreter-ColorError.html">ColorError</a></li></ul><h3>Modules</h3><ul><li><a href="module-ColorInterpreter.html">ColorInterpreter</a><ul class='methods'><li data-type='method'><a href="module-ColorInterpreter.html#~isElement">isElement</a></li><li data-type='method'><a href="module-ColorInterpreter.html#~isFunction">isFunction</a></li><li data-type='method'><a href="module-ColorInterpreter.html#~isNumber">isNumber</a></li><li data-type='method'><a href="module-ColorInterpreter.html#~isObject">isObject</a></li><li data-type='method'><a href="module-ColorInterpreter.html#~isString">isString</a></li><li data-type='method'><a href="module-ColorInterpreter.html#~rgb2hsl">rgb2hsl</a></li><li data-type='method'><a href="module-ColorInterpreter.html#~to360Degrees">to360Degrees</a></li><li data-type='method'><a href="module-ColorInterpreter.html#~toFixed">toFixed</a></li><li data-type='method'><a href="module-ColorInterpreter.html#~zeroPad2">zeroPad2</a></li></ul></li></ul>
+</nav>
+
+<div id="main">
+    
+
+    
+
+
+
+    
+
+
+
+
+
+
+
+
+
+    
+
+
+    <section class="readme">
+        <article><h1>ColorInterpreter</h1>
+<p><a href="https://www.npmjs.org/package/colorinterpreter"><img src="http://img.shields.io/npm/v/colorinterpreter.svg" alt="View on NPM"></a>
+<a href="https://www.npmjs.org/package/colorinterpreter"><img src="http://img.shields.io/npm/dt/colorinterpreter.svg" alt="NPM Module Downloads"></a>
+<a href="https://travis-ci.org/mortzdk/colorinterpreter"><img src="https://travis-ci.org/mortzdk/colorinterpreter.svg?branch=master" alt="Build Status"></a>
+<a href="https://coveralls.io/github/mortzdk/colorinterpreter?branch=master"><img src="https://coveralls.io/repos/github/mortzdk/colorinterpreter/badge.svg?branch=master" alt="Coverage Status"></a>
+<a href="https://david-dm.org/mortzdk/colorinterpreter"><img src="https://david-dm.org/mortzdk/colorinterpreter.svg" alt="Dependency Status"></a></p>
+<p>A javascript module to interpret and output browser color strings.</p>
+<p>ColorInterpreter support the following browser color strings with inspiration from the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value">Mozilla Documentation</a>:</p>
+<ul>
+<li>HEX</li>
+<li>HEXA (Hex with alpha value)</li>
+<li>RGB</li>
+<li>RGBA</li>
+<li>HSL</li>
+<li>HSLA</li>
+<li>Keywords</li>
+</ul>
+<p>Furthermore the following values can be obtained from a Color object:</p>
+<ul>
+<li>Brightness</li>
+<li>Luminance</li>
+<li>Difference</li>
+<li>Red (RGBA)</li>
+<li>Green (RGBA)</li>
+<li>Blue (RGBA)</li>
+<li>Alpha (RGBA)</li>
+</ul>
+<h3>Installation</h3>
+<h5>Npm</h5>
+<p>To install using NPM simply type:</p>
+<pre class="prettyprint source"><code>$ npm install colorinterpreter --save
+</code></pre>
+<h5>Bower</h5>
+<pre class="prettyprint source"><code>$ bower install colorinterpreter --save
+
+</code></pre>
+<h3>Usage</h3>
+<h5>Nodejs</h5>
+<pre class="prettyprint source lang-javascript"><code>var ColorInterpreter = require(&quot;colorinterpreter&quot;);
+var Color            = ColorInterpreter.Color;
+var ColorError       = ColorInterpreter.ColorError;
+var gold             = new Color(&quot;gold&quot;);
+
+// Formats to output
+gold.toHEX();            // #FFD700                 - The HEX color string                   
+gold.toHEXA();           // #FFD700FF               - The HEXA color string
+gold.toPercentageRGB();  // rgb(100%,84.31%,0%)     - The RGB in percent color string
+gold.toPercentageRGBA(); // rgba(100%,84.31%,0%,1)  - The RGBA in percent color string
+gold.toRGB();            // rgb(255,215,0)          - The RGB color string
+gold.toRGBA();           // rgba(255,215,0,1)       - The RGBA color string
+gold.toHSL();            // hsl(50.59,100%,50%)     - The HSL color string        
+gold.toHSLA();           // hsla(50.59,100%,50%,1)  - The HSLA color string
+gold.toKeyword();        // gold                    - The Keyword color string
+
+// Additional information about color
+gold.brightness();       // 202.45                  - The brightness value
+gold.luminance();        // 0.6986087742815887      - The luminance value
+gold.difference(&quot;#FFF&quot;); // 295                     - The difference between gold and white
+
+gold.red();              // 255                     - The RGBA red value
+gold.green();            // 215                     - The RGBA green value
+gold.blue();             // 0                       - The RGBA blue value
+gold.alpha();            // 1                       - The RGBA alpha value
+gold.isValid();          // true                    - States that the parsed color string is valid
+
+// Mutators
+gold.setFixed(6);        // Returns formats with up to 6 decimals
+
+// Utility methods
+gold.clone()             // Creates a clone of the gold object
+gold.equals(&quot;#FFF&quot;)      // Checks if the color is equal to the argument
+</code></pre>
+<h5>Browser</h5>
+<pre class="prettyprint source lang-HTML"><code>&lt;script src=&quot;dist/colorinterpreter.min.js&quot; type=&quot;text/javascript&quot;>
+&lt;/script>
+
+&lt;script type=&quot;text/javascript&quot;>
+var Color      = window.ColorInterpreter.Color;
+var ColorError = window.ColorInterpreter.ColorError;
+var gold       = new Color(&quot;gold&quot;);
+
+// Formats to output
+gold.toHEX();            // #FFD700                 - The HEX color string                   
+gold.toHEXA();           // #FFD700FF               - The HEXA color string
+gold.toPercentageRGB();  // rgb(100%,84.31%,0%)     - The RGB in percent color string
+gold.toPercentageRGBA(); // rgba(100%,84.31%,0%,1)  - The RGBA in percent color string
+gold.toRGB();            // rgb(255,215,0)          - The RGB color string
+gold.toRGBA();           // rgba(255,215,0,1)       - The RGBA color string
+gold.toHSL();            // hsl(50.59,100%,50%)     - The HSL color string        
+gold.toHSLA();           // hsla(50.59,100%,50%,1)  - The HSLA color string
+gold.toKeyword();        // gold                    - The Keyword color string
+
+// Additional information about color
+gold.brightness();       // 202.45                  - The brightness value
+gold.luminance();        // 0.6986087742815887      - The luminance value
+gold.difference(&quot;#FFF&quot;); // 295                     - The difference between gold and white
+
+gold.red();              // 255                     - The RGBA red value
+gold.green();            // 215                     - The RGBA green value
+gold.blue();             // 0                       - The RGBA blue value
+gold.alpha();            // 1                       - The RGBA alpha value
+gold.isValid();          // true                    - States that the parsed color string is valid
+
+// Mutators
+gold.setFixed(6);        // Returns formats with up to 6 decimals
+
+// Utility methods
+gold.clone()             // Creates a clone of the gold object
+gold.equals(&quot;#FFF&quot;)      // Checks if the color is equal to the argument
+&lt;/script>
+</code></pre>
+<h3>Documentation</h3>
+<p>The full documentation of the module can be found <a href="https://github.com/mortzdk/colorinterpreter/tree/master/docs">here</a>.</p></article>
+    </section>
+
+
+
+
+
+
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.3</a> on Thu Dec 23 2021 07:35:22 GMT+0100 (Central European Standard Time) using the Minami theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/linenumber.js"></script>
+</body>
+</html>
