@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>ColorError - Documentation</title>
+
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="module-ColorInterpreter.Color.html">Color</a><ul class='methods'><li data-type='method'><a href="module-ColorInterpreter.Color.html#.addKeyword">addKeyword</a></li><li data-type='method'><a href="module-ColorInterpreter.Color.html#.hasBrowserSupport">hasBrowserSupport</a></li><li data-type='method'><a href="module-ColorInterpreter.Color.html#alpha">alpha</a></li><li data-type='method'><a href="module-ColorInterpreter.Color.html#blue">blue</a></li><li data-type='method'><a href="module-ColorInterpreter.Color.html#brightness">brightness</a></li><li data-type='method'><a href="module-ColorInterpreter.Color.html#clone">clone</a></li><li data-type='method'><a href="module-ColorInterpreter.Color.html#difference">difference</a></li><li data-type='method'><a href="module-ColorInterpreter.Color.html#equals">equals</a></li><li data-type='method'><a href="module-ColorInterpreter.Color.html#green">green</a></li><li data-type='method'><a href="module-ColorInterpreter.Color.html#isValid">isValid</a></li><li data-type='method'><a href="module-ColorInterpreter.Color.html#luminance">luminance</a></li><li data-type='method'><a href="module-ColorInterpreter.Color.html#red">red</a></li><li data-type='method'><a href="module-ColorInterpreter.Color.html#setFixed">setFixed</a></li><li data-type='method'><a href="module-ColorInterpreter.Color.html#toHEX">toHEX</a></li><li data-type='method'><a href="module-ColorInterpreter.Color.html#toHEXA">toHEXA</a></li><li data-type='method'><a href="module-ColorInterpreter.Color.html#toHSL">toHSL</a></li><li data-type='method'><a href="module-ColorInterpreter.Color.html#toHSLA">toHSLA</a></li><li data-type='method'><a href="module-ColorInterpreter.Color.html#toKeyword">toKeyword</a></li><li data-type='method'><a href="module-ColorInterpreter.Color.html#toPercentageRGB">toPercentageRGB</a></li><li data-type='method'><a href="module-ColorInterpreter.Color.html#toPercentageRGBA">toPercentageRGBA</a></li><li data-type='method'><a href="module-ColorInterpreter.Color.html#toRGB">toRGB</a></li><li data-type='method'><a href="module-ColorInterpreter.Color.html#toRGBA">toRGBA</a></li><li data-type='method'><a href="module-ColorInterpreter.Color.html#toString">toString</a></li></ul></li><li><a href="module-ColorInterpreter-ColorError.html">ColorError</a></li></ul><h3>Modules</h3><ul><li><a href="module-ColorInterpreter.html">ColorInterpreter</a><ul class='methods'><li data-type='method'><a href="module-ColorInterpreter.html#~isElement">isElement</a></li><li data-type='method'><a href="module-ColorInterpreter.html#~isFunction">isFunction</a></li><li data-type='method'><a href="module-ColorInterpreter.html#~isNumber">isNumber</a></li><li data-type='method'><a href="module-ColorInterpreter.html#~isObject">isObject</a></li><li data-type='method'><a href="module-ColorInterpreter.html#~isString">isString</a></li><li data-type='method'><a href="module-ColorInterpreter.html#~rgb2hsl">rgb2hsl</a></li><li data-type='method'><a href="module-ColorInterpreter.html#~to360Degrees">to360Degrees</a></li><li data-type='method'><a href="module-ColorInterpreter.html#~toFixed">toFixed</a></li><li data-type='method'><a href="module-ColorInterpreter.html#~zeroPad2">zeroPad2</a></li></ul></li></ul>
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">ColorError</h1>
+    
+
+    
+
+
+
+
+<section>
+
+<header>
+    
+        <h2>
+            <span class="ancestors"><a href="module-ColorInterpreter.html">ColorInterpreter</a>~</span>
+        
+        ColorError
+        </h2>
+        
+            <div class="class-description"><p>The ColorError class is used to signal an error when parsing a
+browser color string.</p></div>
+        
+    
+</header>
+
+<article>
+    <div class="container-overview">
+    
+        
+
+    
+    <h2>Constructor</h2>
+    
+
+    <h4 class="name" id="ColorError"><span class="type-signature"></span>new ColorError<span class="signature">(_message)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    <p>An error object associated with parsing of browser color strings.</p>
+</div>
+
+
+
+    <h5>Extends:</h5>
+    
+
+
+    <ul>
+        <li>Error</li>
+    </ul>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>_message</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The message that should be assigned to
+the error.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="index.js.html">index.js</a>, <a href="index.js.html#line1214">line 1214</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>// If a color string could not be parsed, a ColorError is thrown.
+try {
+    ColorInterpreter.Color("mortz");
+} catch (err) {
+    console.log(err instanceof ColorInterpreter.ColorError); // true
+}</code></pre>
+
+
+
+    
+    </div>
+
+    
+        <h3 class="subsection-title">Extends</h3>
+
+        
+
+
+    <ul>
+        <li>Error</li>
+    </ul>
+
+
+    
+
+    
+
+    
+
+     
+
+    
+
+    
+
+    
+
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.3</a> on Thu Dec 23 2021 07:35:22 GMT+0100 (Central European Standard Time) using the Minami theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/linenumber.js"></script>
+</body>
+</html>
