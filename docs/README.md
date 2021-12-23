@@ -11,7 +11,7 @@ string as any browser color type, currently: HEX, HEXA, RGB, RGBA, HSL, HSLA,
 and color keywords.</p>
 <p>The ColorError class is used whenever the parsing of a color goes wrong.</p>
 
-**Version**: 1.0.2  
+**Version**: 1.0.4  
 **Example**  
 ```js
 // A typical usage of the Color object. Here the "gold" string could be
@@ -93,7 +93,7 @@ provides methods to generate brightness and luminance values of the given
 color. Finally it enables comparisons methods between other colors to compare
 equalness and difference.</p>
 
-**Kind**: static class of <code>[ColorInterpreter](#module_ColorInterpreter)</code>  
+**Kind**: static class of [<code>ColorInterpreter</code>](#module_ColorInterpreter)  
 **Link**: https://developer.mozilla.org/en-US/docs/Web/CSS/color_value  
 
 * [.Color](#module_ColorInterpreter.Color)
@@ -172,42 +172,42 @@ console.log(gold.toKeyword());        // gold
 #### color.toRGB() ⇒ <code>string</code>
 <p>Generates the parsed color as a RGB string.</p>
 
-**Kind**: instance method of <code>[Color](#module_ColorInterpreter.Color)</code>  
+**Kind**: instance method of [<code>Color</code>](#module_ColorInterpreter.Color)  
 **Returns**: <code>string</code> - <p>The generated RGB string</p>  
 <a name="module_ColorInterpreter.Color+toPercentageRGB"></a>
 
 #### color.toPercentageRGB() ⇒ <code>string</code>
 <p>Generates the parsed color as a percentage RGB string.</p>
 
-**Kind**: instance method of <code>[Color](#module_ColorInterpreter.Color)</code>  
+**Kind**: instance method of [<code>Color</code>](#module_ColorInterpreter.Color)  
 **Returns**: <code>string</code> - <p>The generated RGB string</p>  
 <a name="module_ColorInterpreter.Color+toRGBA"></a>
 
 #### color.toRGBA() ⇒ <code>string</code>
 <p>Generates the parsed color as a RGBA string.</p>
 
-**Kind**: instance method of <code>[Color](#module_ColorInterpreter.Color)</code>  
+**Kind**: instance method of [<code>Color</code>](#module_ColorInterpreter.Color)  
 **Returns**: <code>string</code> - <p>The generated RGBA string</p>  
 <a name="module_ColorInterpreter.Color+toPercentageRGBA"></a>
 
 #### color.toPercentageRGBA() ⇒ <code>string</code>
 <p>Generates the parsed color as a percentage RGBA string.</p>
 
-**Kind**: instance method of <code>[Color](#module_ColorInterpreter.Color)</code>  
+**Kind**: instance method of [<code>Color</code>](#module_ColorInterpreter.Color)  
 **Returns**: <code>string</code> - <p>The generated RGBA string</p>  
 <a name="module_ColorInterpreter.Color+toHSL"></a>
 
 #### color.toHSL() ⇒ <code>string</code>
 <p>Generates the parsed color as a HSL string.</p>
 
-**Kind**: instance method of <code>[Color](#module_ColorInterpreter.Color)</code>  
+**Kind**: instance method of [<code>Color</code>](#module_ColorInterpreter.Color)  
 **Returns**: <code>string</code> - <p>The generated HSL string</p>  
 <a name="module_ColorInterpreter.Color+toHSLA"></a>
 
 #### color.toHSLA() ⇒ <code>string</code>
 <p>Generates the parsed color as a HSLA string.</p>
 
-**Kind**: instance method of <code>[Color](#module_ColorInterpreter.Color)</code>  
+**Kind**: instance method of [<code>Color</code>](#module_ColorInterpreter.Color)  
 **Returns**: <code>string</code> - <p>The generated HSLA string</p>  
 <a name="module_ColorInterpreter.Color+toKeyword"></a>
 
@@ -215,28 +215,28 @@ console.log(gold.toKeyword());        // gold
 <p>Generates the parsed color as a keyword string or an empty string if the
 keyword was not found.</p>
 
-**Kind**: instance method of <code>[Color](#module_ColorInterpreter.Color)</code>  
+**Kind**: instance method of [<code>Color</code>](#module_ColorInterpreter.Color)  
 **Returns**: <code>string</code> - <p>The generated keyword string or an empty string</p>  
 <a name="module_ColorInterpreter.Color+toHEX"></a>
 
 #### color.toHEX() ⇒ <code>string</code>
 <p>Generates the parsed color as a HEX string.</p>
 
-**Kind**: instance method of <code>[Color](#module_ColorInterpreter.Color)</code>  
+**Kind**: instance method of [<code>Color</code>](#module_ColorInterpreter.Color)  
 **Returns**: <code>string</code> - <p>The generated HEX string</p>  
 <a name="module_ColorInterpreter.Color+toHEXA"></a>
 
 #### color.toHEXA() ⇒ <code>string</code>
 <p>Generates the parsed color as a HEX string with an alpha value.</p>
 
-**Kind**: instance method of <code>[Color](#module_ColorInterpreter.Color)</code>  
+**Kind**: instance method of [<code>Color</code>](#module_ColorInterpreter.Color)  
 **Returns**: <code>string</code> - <p>The generated HEX string with an alpha value</p>  
 <a name="module_ColorInterpreter.Color+toString"></a>
 
 #### color.toString(_scheme) ⇒ <code>string</code>
 <p>Returns a string representation of the color object</p>
 
-**Kind**: instance method of <code>[Color](#module_ColorInterpreter.Color)</code>  
+**Kind**: instance method of [<code>Color</code>](#module_ColorInterpreter.Color)  
 **Returns**: <code>string</code> - <p>A color string of the given scheme or a HEX color 
 string.</p>  
 
@@ -266,7 +266,7 @@ console.log(gold.toString(Color.Keyword));    // gold
 <p>Sets a fixed value, representing the decimals accepted in output of 
 toPercentageRGB, toPercentageRGBA, toHSL, and toHSLA.</p>
 
-**Kind**: instance method of <code>[Color](#module_ColorInterpreter.Color)</code>  
+**Kind**: instance method of [<code>Color</code>](#module_ColorInterpreter.Color)  
 **Returns**: <code>Color</code> - <p>A reference to itself.</p>  
 
 | Param | Type | Description |
@@ -279,14 +279,14 @@ toPercentageRGB, toPercentageRGBA, toHSL, and toHSLA.</p>
 <p>Returns whether the Color object is valid, that is, the Color object was
 constructed with a color that it was able to parse.</p>
 
-**Kind**: instance method of <code>[Color](#module_ColorInterpreter.Color)</code>  
+**Kind**: instance method of [<code>Color</code>](#module_ColorInterpreter.Color)  
 **Returns**: <code>boolean</code> - <p>Whether the Color object is valid.</p>  
 <a name="module_ColorInterpreter.Color+equals"></a>
 
 #### color.equals(_color) ⇒ <code>boolean</code>
 <p>Checks if the current color object is equal to a given color.</p>
 
-**Kind**: instance method of <code>[Color](#module_ColorInterpreter.Color)</code>  
+**Kind**: instance method of [<code>Color</code>](#module_ColorInterpreter.Color)  
 **Returns**: <code>boolean</code> - <p>Whether the colors are equal.</p>  
 **Throws**:
 
@@ -302,7 +302,7 @@ constructed with a color that it was able to parse.</p>
 #### color.clone() ⇒ <code>Color</code>
 <p>Creates a clone of the current Color object.</p>
 
-**Kind**: instance method of <code>[Color](#module_ColorInterpreter.Color)</code>  
+**Kind**: instance method of [<code>Color</code>](#module_ColorInterpreter.Color)  
 **Returns**: <code>Color</code> - <p>A clone of the current color.</p>  
 **Throws**:
 
@@ -313,44 +313,44 @@ constructed with a color that it was able to parse.</p>
 #### color.red() ⇒ <code>number</code>
 <p>Returns the red RGB value.</p>
 
-**Kind**: instance method of <code>[Color](#module_ColorInterpreter.Color)</code>  
+**Kind**: instance method of [<code>Color</code>](#module_ColorInterpreter.Color)  
 **Returns**: <code>number</code> - <p>The red value</p>  
 <a name="module_ColorInterpreter.Color+green"></a>
 
 #### color.green() ⇒ <code>number</code>
 <p>Returns the green RGB value.</p>
 
-**Kind**: instance method of <code>[Color](#module_ColorInterpreter.Color)</code>  
+**Kind**: instance method of [<code>Color</code>](#module_ColorInterpreter.Color)  
 **Returns**: <code>number</code> - <p>The green value</p>  
 <a name="module_ColorInterpreter.Color+blue"></a>
 
 #### color.blue() ⇒ <code>number</code>
 <p>Returns the blue RGB value.</p>
 
-**Kind**: instance method of <code>[Color](#module_ColorInterpreter.Color)</code>  
+**Kind**: instance method of [<code>Color</code>](#module_ColorInterpreter.Color)  
 **Returns**: <code>number</code> - <p>The blue value</p>  
 <a name="module_ColorInterpreter.Color+alpha"></a>
 
 #### color.alpha() ⇒ <code>number</code>
 <p>Returns the alpha value.</p>
 
-**Kind**: instance method of <code>[Color](#module_ColorInterpreter.Color)</code>  
+**Kind**: instance method of [<code>Color</code>](#module_ColorInterpreter.Color)  
 **Returns**: <code>number</code> - <p>The alpha value</p>  
 <a name="module_ColorInterpreter.Color+brightness"></a>
 
 #### color.brightness() ⇒ <code>number</code>
 <p>Returns the brightness value as defined by 
-[w3](https://www.w3.org/TR/AERT#color-contrast).</p>
+[href="http://www.w3.org/TR/AERT#color-contrast|w3](https://<a)">www.w3.org/TR/AERT#color-contrast|w3}</a>.</p>
 
-**Kind**: instance method of <code>[Color](#module_ColorInterpreter.Color)</code>  
+**Kind**: instance method of [<code>Color</code>](#module_ColorInterpreter.Color)  
 **Returns**: <code>number</code> - <p>The brightness value</p>  
 <a name="module_ColorInterpreter.Color+difference"></a>
 
 #### color.difference(_color) ⇒ <code>number</code>
 <p>Returns the color difference value as defined by 
-[w3](https://www.w3.org/TR/AERT#color-contrast).</p>
+[href="http://www.w3.org/TR/AERT#color-contrast|w3](https://<a)">www.w3.org/TR/AERT#color-contrast|w3}</a>.</p>
 
-**Kind**: instance method of <code>[Color](#module_ColorInterpreter.Color)</code>  
+**Kind**: instance method of [<code>Color</code>](#module_ColorInterpreter.Color)  
 **Returns**: <code>number</code> - <p>The difference value or -1 if color parameter was not
 a color.</p>  
 **Throws**:
@@ -367,38 +367,38 @@ a color.</p>
 #### color.luminance() ⇒ <code>number</code>
 <p>Returns the luminance value as defined by
 {@link 
-http://www.w3.org/TR/2008/REC-WCAG20-20081211/#relativeluminancedef|w3}</p>
+http://<a href="http://www.w3.org/TR/2008/REC-WCAG20-20081211/#relativeluminancedef|w3}">www.w3.org/TR/2008/REC-WCAG20-20081211/#relativeluminancedef|w3}</a></p>
 
-**Kind**: instance method of <code>[Color](#module_ColorInterpreter.Color)</code>  
+**Kind**: instance method of [<code>Color</code>](#module_ColorInterpreter.Color)  
 **Returns**: <code>number</code> - <p>The luminance value</p>  
 <a name="module_ColorInterpreter.Color.RGB"></a>
 
 #### Color.RGB : <code>string</code>
-**Kind**: static constant of <code>[Color](#module_ColorInterpreter.Color)</code>  
+**Kind**: static constant of [<code>Color</code>](#module_ColorInterpreter.Color)  
 <a name="module_ColorInterpreter.Color.RGBA"></a>
 
 #### Color.RGBA : <code>string</code>
-**Kind**: static constant of <code>[Color](#module_ColorInterpreter.Color)</code>  
+**Kind**: static constant of [<code>Color</code>](#module_ColorInterpreter.Color)  
 <a name="module_ColorInterpreter.Color.HSL"></a>
 
 #### Color.HSL : <code>string</code>
-**Kind**: static constant of <code>[Color](#module_ColorInterpreter.Color)</code>  
+**Kind**: static constant of [<code>Color</code>](#module_ColorInterpreter.Color)  
 <a name="module_ColorInterpreter.Color.HSLA"></a>
 
 #### Color.HSLA : <code>string</code>
-**Kind**: static constant of <code>[Color](#module_ColorInterpreter.Color)</code>  
+**Kind**: static constant of [<code>Color</code>](#module_ColorInterpreter.Color)  
 <a name="module_ColorInterpreter.Color.HEX"></a>
 
 #### Color.HEX : <code>string</code>
-**Kind**: static constant of <code>[Color](#module_ColorInterpreter.Color)</code>  
+**Kind**: static constant of [<code>Color</code>](#module_ColorInterpreter.Color)  
 <a name="module_ColorInterpreter.Color.HEXA"></a>
 
 #### Color.HEXA : <code>string</code>
-**Kind**: static constant of <code>[Color](#module_ColorInterpreter.Color)</code>  
+**Kind**: static constant of [<code>Color</code>](#module_ColorInterpreter.Color)  
 <a name="module_ColorInterpreter.Color.KEYWORD"></a>
 
 #### Color.KEYWORD : <code>string</code>
-**Kind**: static constant of <code>[Color](#module_ColorInterpreter.Color)</code>  
+**Kind**: static constant of [<code>Color</code>](#module_ColorInterpreter.Color)  
 <a name="module_ColorInterpreter.Color.hasBrowserSupport"></a>
 
 #### Color.hasBrowserSupport(_scheme) ⇒ <code>Boolean</code> \| <code>Object</code>
@@ -406,7 +406,7 @@ http://www.w3.org/TR/2008/REC-WCAG20-20081211/#relativeluminancedef|w3}</p>
 available in javascript versions with a DOM model such as javascript in 
 browsers.</p>
 
-**Kind**: static method of <code>[Color](#module_ColorInterpreter.Color)</code>  
+**Kind**: static method of [<code>Color</code>](#module_ColorInterpreter.Color)  
 **Returns**: <code>Boolean</code> \| <code>Object</code> - <p>Whether there exists support for the scheme. 
 The special case of keywords returns an object of booleans representing
 the support of CSS1, CSS2, CSS3, and CSS4 keywords.</p>  
@@ -432,7 +432,7 @@ console.log(Color.hasBrowserSupport(Color.Keyword));    // {CSS1:true||false, CS
 #### Color.addKeyword(_name, _color)
 <p>Adds keyword to the keyword table.</p>
 
-**Kind**: static method of <code>[Color](#module_ColorInterpreter.Color)</code>  
+**Kind**: static method of [<code>Color</code>](#module_ColorInterpreter.Color)  
 **Throws**:
 
 - <code>ColorError</code> <p>A ColorError describing what went wrong.</p>
@@ -448,46 +448,46 @@ console.log(Color.hasBrowserSupport(Color.Keyword));    // {CSS1:true||false, CS
 #### Color~fixed : <code>number</code>
 <p>The fixed value</p>
 
-**Kind**: inner property of <code>[Color](#module_ColorInterpreter.Color)</code>  
+**Kind**: inner property of [<code>Color</code>](#module_ColorInterpreter.Color)  
 **Access**: protected  
 <a name="module_ColorInterpreter.Color..valid"></a>
 
 #### Color~valid : <code>boolean</code>
 <p>The valid value</p>
 
-**Kind**: inner property of <code>[Color](#module_ColorInterpreter.Color)</code>  
+**Kind**: inner property of [<code>Color</code>](#module_ColorInterpreter.Color)  
 **Access**: protected  
 <a name="module_ColorInterpreter.Color..r"></a>
 
 #### Color~r : <code>number</code>
 <p>The red value</p>
 
-**Kind**: inner property of <code>[Color](#module_ColorInterpreter.Color)</code>  
+**Kind**: inner property of [<code>Color</code>](#module_ColorInterpreter.Color)  
 <a name="module_ColorInterpreter.Color..g"></a>
 
 #### Color~g : <code>number</code>
 <p>The green value</p>
 
-**Kind**: inner property of <code>[Color](#module_ColorInterpreter.Color)</code>  
+**Kind**: inner property of [<code>Color</code>](#module_ColorInterpreter.Color)  
 <a name="module_ColorInterpreter.Color..b"></a>
 
 #### Color~b : <code>number</code>
 <p>The blue value</p>
 
-**Kind**: inner property of <code>[Color](#module_ColorInterpreter.Color)</code>  
+**Kind**: inner property of [<code>Color</code>](#module_ColorInterpreter.Color)  
 <a name="module_ColorInterpreter.Color..a"></a>
 
 #### Color~a : <code>number</code>
 <p>The alpha value</p>
 
-**Kind**: inner property of <code>[Color](#module_ColorInterpreter.Color)</code>  
+**Kind**: inner property of [<code>Color</code>](#module_ColorInterpreter.Color)  
 <a name="module_ColorInterpreter..ColorError"></a>
 
 ### ColorInterpreter~ColorError ⇐ <code>Error</code>
 <p>The ColorError class is used to signal an error when parsing a 
 browser color string.</p>
 
-**Kind**: inner class of <code>[ColorInterpreter](#module_ColorInterpreter)</code>  
+**Kind**: inner class of [<code>ColorInterpreter</code>](#module_ColorInterpreter)  
 **Extends**: <code>Error</code>  
 <a name="new_module_ColorInterpreter..ColorError_new"></a>
 

@@ -1,6 +1,6 @@
 {
   "name": "colorinterpreter",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "ColorInterpreter is a module able to convert any acceptable browser color-scheme to any other acceptable browser color-scheme.",
   "homepage": "https://github.com/mortzdk/colorinterpreter",
   "repository": {
@@ -31,18 +31,18 @@
   "license": "SEE LICENSE IN MIT-LICENSE",
   "main": "index.js",
   "dependencies": {
-    "jsdoc": "^3.4.3",
-    "jsdoc-to-markdown": "^3.0.0",
-    "uglify-js": "^2.8.22",
-    "minami": "1.1.1"
   },
   "devDependencies": {
     "browserify": "^14.3.0",
+    "coveralls": "^2.13.0",
     "eslint": "^3.19.0",
     "faucet": "0.0.1",
     "istanbul": "~0.4.5",
+    "jsdoc": "^3.4.3",
+    "jsdoc-to-markdown": "^3.0.0",
+    "minami": "1.1.1",
     "tape": "^4.6.3",
-    "coveralls": "^2.13.0"
+    "uglify-js": "^2.8.22"
   },
   "scripts": {
     "test": "eslint index.js test/test.js && node test/test.js | faucet",
