@@ -1,6 +1,6 @@
 {
   "name": "colorinterpreter",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "ColorInterpreter is a module able to convert any acceptable browser color-scheme to any other acceptable browser color-scheme.",
   "homepage": "https://github.com/mortzdk/colorinterpreter",
   "repository": {
