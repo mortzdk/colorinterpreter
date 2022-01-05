@@ -37,16 +37,16 @@
     "coveralls": "^2.13.0",
     "eslint": "^4.18.2",
     "faucet": "0.0.1",
-    "istanbul": "~0.4.5",
     "jsdoc": "^3.4.3",
     "jsdoc-to-markdown": "^3.0.0",
     "minami": "1.1.1",
+    "nyc": "^15.1.0",
     "tape": "^4.6.3",
     "uglify-js": "^2.8.22"
   },
   "scripts": {
     "test": "eslint index.js test/test.js && node test/test.js | faucet",
-    "cov": "istanbul cover test/test.js -x test/test.js && cat coverage/lcov.info | coveralls",
+    "cov": "nyc node test/test.js && cat coverage/lcov.info | coveralls",
     "cover": "npm run cov",
     "coverage": "npm run cov",
     "markdown": "jsdoc2md -l js --configure .jsdoc.json index.js > docs/README.md",
@@ -83,5 +83,10 @@
       "browser": true,
       "node": true
     }
+  },
+  "nyc": {
+    "exclude": [
+      "test/test.js"
+    ]
   }
 }
