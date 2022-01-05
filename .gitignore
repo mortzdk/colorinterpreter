@@ -1,4 +1,5 @@
 .tern-project
+.nyc_output
 *.swp
 *.swo
 npm-debug.log
