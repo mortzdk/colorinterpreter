@@ -15,7 +15,7 @@
  * The ColorError class is used whenever the parsing of a color goes wrong.
  *
  * @module ColorInterpreter
- * @version 1.0.4
+ * @version 1.0.5
  *
  * @example
  * // A typical usage of the Color object. Here the "gold" string could be
@@ -219,8 +219,7 @@ var support,
                 view = (_context.ownerDocument || document).defaultView;
 
             if ( view && "getComputedStyle" in view ) { // W3C standard way
-                color = view.getComputedStyle(_context, null)
-                            .getPropertyValue("color");
+                color = view.getComputedStyle(_context, null).getPropertyValue("color");
             } else if ( "currentStyle" in _context ) { // IE
                 color = _context.currentStyle["color"];
             } else {
@@ -450,13 +449,13 @@ var support,
             process : function (_bits) {
                 var p = [
                     _bits[2] === "%" ? (parseFloat(_bits[1])*255)/100
-                                     : parseInt(_bits[3], 10),
+                        : parseInt(_bits[3], 10),
                     _bits[5] === "%" ? (parseFloat(_bits[4])*255)/100
-                                     : parseInt(_bits[6], 10),
+                        : parseInt(_bits[6], 10),
                     _bits[8] === "%" ? (parseFloat(_bits[7])*255)/100
-                                     : parseInt(_bits[9], 10),
+                        : parseInt(_bits[9], 10),
                     _bits[11] === "%" ? parseFloat(_bits[10])/100
-                                     : parseFloat(_bits[10])
+                        : parseFloat(_bits[10])
                 ];
 
                 if ( isNaN(p[3]) ) {
@@ -741,7 +740,7 @@ Color.prototype = {
         var self = this;
         return colors2keywords[
             self.a === 0 ? "00000000"
-                         : self.toHEX().substr(1, 6).toLowerCase()+"ff"
+                : self.toHEX().substr(1, 6).toLowerCase()+"ff"
         ] || "";
     },
 
