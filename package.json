@@ -34,7 +34,7 @@
     "browserify": "^14.3.0",
     "coveralls": "^3.1.1",
     "eslint": "^8.6.0",
-    "faucet": "0.0.1",
+    "faucet": "0.0.4",
     "jsdoc": "^3.4.3",
     "jsdoc-to-markdown": "^7.1.0",
     "minami": "1.1.1",
